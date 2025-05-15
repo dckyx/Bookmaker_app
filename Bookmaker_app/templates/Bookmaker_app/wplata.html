@@ -1,0 +1,18 @@
+{% extends "bookmaker_app/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="custom-card p-4">
+  <h2 class="mb-4 text-center">💸 Wpłata środków</h2>
+  <form method="post" class="text-light">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{ form.kwota.label_tag }}
+      {{ form.kwota }}
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-success w-100">Wpłać</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
