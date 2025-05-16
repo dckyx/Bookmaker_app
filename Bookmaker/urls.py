@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+
 from Bookmaker_app import views
 
 
@@ -28,7 +30,10 @@ urlpatterns = [
     path('user_panel/', views.user_panel, name='user_panel'),
     path('wplata/', views.wplata, name='wplata'),
     path('wyplata/', views.wyplata, name='wyplata'),
+    path("spin/", TemplateView.as_view(template_name="index.html"), name="spin"),
+
     path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
+
 
 
 

@@ -62,7 +62,7 @@ class Drużyna(models.Model):
 
 class Event(models.Model):
     name = models.CharField(max_length=250)
-    datetime = models.DateField()
+    datetime = models.DateTimeField()
     dyscyplina = models.ForeignKey(Dyscyplina, on_delete=models.CASCADE)
     druzyna1 = models.ForeignKey(Drużyna, on_delete=models.CASCADE,related_name='druzyna1')
     druzyna2 = models.ForeignKey(Drużyna, on_delete=models.CASCADE,related_name="druzyna2")

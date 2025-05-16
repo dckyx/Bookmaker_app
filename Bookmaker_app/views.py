@@ -14,10 +14,10 @@ from .models import Dyscyplina, Event
 from .models import *
 
 def home(request):
-    najblizsze_eventy = Event.objects.filter(datetime__gte=date.today()).order_by('datetime')[:6]
+    najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).order_by('datetime')[:5]
     dyscypliny = Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name')
     return render(request, 'Bookmaker_app/home.html', {
-        'events': najblizsze_eventy,
+        'najblizsze_mecze': najblizsze_mecze,
         'dyscypliny': dyscypliny,
     })
 
@@ -60,6 +60,7 @@ def user_panel(request):
         'transakcje': transakcje,
         'saldo': request.user.saldo,
         'modal_message': modal_message,
+        'dyscypliny': Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name'),
     })
 
 
@@ -100,11 +101,15 @@ def wplata(request):
             wartosc=kwota,
             typ='Wpłata',
             opis=f"Wpłata środków: {kwota} zł"
+
         )
 
         request.session['modal_message'] = f'Wpłacono {kwota} zł.'
         return redirect('user_panel')
-    return render(request, 'bookmaker_app/wplata.html', {'form': form})
+    return render(request, 'bookmaker_app/wplata.html', {
+        'form': form,
+        'dyscypliny': Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name'),
+    })
 
 @login_required
 def wyplata(request):
@@ -127,4 +132,7 @@ def wyplata(request):
             return redirect('user_panel')
         else:
             request.session['modal_message'] = 'Nie masz wystarczająco środków.'
-    return render(request, 'bookmaker_app/wyplata.html', {'form': form})
+    return render(request, 'bookmaker_app/wyplata.html', {
+        'form': form,
+        'dyscypliny': Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name'),
+    })

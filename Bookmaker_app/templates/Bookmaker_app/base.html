@@ -20,6 +20,8 @@
             <div class="center_header" id="c_header_logo">
                 <a href="{% url 'user_panel' %}" class="link_but_button">Zakłady</a>
                 <a href="#" class="link_but_button">Na Żywo</a>
+                <a href="{%  url 'spin' %}" class="link_but_button"><img src="{% static 'bookmaker_app/images/karol.jpeg' %}" alt="spin" class="logo" style="width: 150px; border-radius:50px"></a>
+
             </div>
             <div id="r_header_logo">
                 <a href="{% url 'login' %}" class="link_but_button">Zaloguj się</a>
@@ -34,11 +36,15 @@
         {% block content %}{% endblock %}
     </main>
 
-    <aside class="left-panel">
+    <aside class="left-panel" style="height: 100vh; overflow-y: auto;">
       {% if dyscypliny %}
         {% for d in dyscypliny %}
-            <a href="{% url 'dyscyplina' d %}" class="btn btn-lg btn-custom">{{ d|title }}</a>
+          {% if d.name and '/' not in d.name %}
+            <a href="{% url 'dyscyplina' d.name %}" class="btn btn-lg btn-custom link_but_button">{{ d.name|title }}</a>
+          {% endif %}
         {% endfor %}
+      {% else %}
+        <p class="text-muted px-2">Brak dostępnych dyscyplin.</p>
       {% endif %}
     </aside>
 

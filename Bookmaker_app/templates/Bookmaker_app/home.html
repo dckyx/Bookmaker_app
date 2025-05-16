@@ -1,52 +1,32 @@
+{% extends "Bookmaker_app/base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Bookmaker</title>
-    <link rel="stylesheet" href="{% static 'bookmaker_app/css/newMenu.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body style="margin: 0; padding: 0;" id="MAIN_BODY">
-  <div class="grid-container">
-    <header class="header">
-        <div id="header_logo">
-            <div id="l_header_logo">
-                <a href="http://127.0.0.1:8000/">
-                <img src='../static/bookmaker_app/images/logo_header.jpg' alt="logo_header_bookmaker" class="logo" style="width: 70%; border-radius: 30px">
-                </a>
-            </div>
-            <div class="center_header" id="c_header_logo">
-                <a id="login" href="{% url 'login' %}" class="link_but_button">Zakłady</a>
-                <a id="register" href="{% url 'register' %}" class="link_but_button">Na Żywo</a>
-                <a id="login" href="{% url 'login' %}" class="link_but_button">MOZE NIE POTRZEBVNY JESZCZE NWM</a>
-            </div>
-            <div id="r_header_logo">
-                <a id="login" href="{% url 'login' %}" class="link_but_button">Zaloguj się</a>
-                <a id="register" href="{% url 'register' %}" class="link_but_button">Zarejestruj się</a>
-            </div>
+{% block content %}
+<div class="container py-4">
+    <h2 class="text-center mb-4">Najbliższe mecze</h2>
 
+    {% if najblizsze_mecze %}
+        <div class="row justify-content-center">
+            {% for mecz in najblizsze_mecze %}
+                <div class="col-md-8 col-lg-6 mb-4">
+                    <div class="p-3 rounded-3 shadow-sm bg-white border-start border-4 border-primary">
+                        <h5 class="mb-2">{{ mecz.name }}</h5>
+                        <p class="mb-1"><strong>Data:</strong> {{ mecz.datetime|date:"Y-m-d H:i" }}</p>
+                        <p class="mb-1"><strong>Drużyny:</strong> {{ mecz.druzyna1.name }} vs {{ mecz.druzyna2.name }}</p>
+                        <p class="mb-1"><strong>Status:</strong> {{ mecz.status|default:"brak" }}</p>
+                        <p class="mb-0"><strong>Wynik:</strong>
+                            {% if mecz.wynik_druzyna1 is not None and mecz.wynik_druzyna2 is not None %}
+                                {{ mecz.wynik_druzyna1 }} - {{ mecz.wynik_druzyna2 }}
+                            {% else %}
+                                Jeszcze brak
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-    </header>
-    <div class="info-bar">Informacje</div>
-    <main class="content">
-      MAIN
-    </main>
-    <aside class="left-panel">
-      {% for d in dyscypliny %}
-        <a href="{% url 'dyscyplina' d %}" class="btn btn-lg btn-custom">{{ d|title }}</a>
-      {% endfor %}
-    </aside>
-    <aside class="sidebar-right">
-      PRAWY PANEL
-    </aside>
-    <div class="bottom-content">
-      <!-- Dodaj zawartość jeśli potrzebna -->
-    </div>
-    <footer class="footer">
-      <p>&copy; 2025 Moja Strona</p>
-    </footer>
-  </div>
-</body>
-</html>
+    {% else %}
+        <p class="text-center text-muted">Brak nadchodzących wydarzeń.</p>
+    {% endif %}
+</div>
+{% endblock %}
