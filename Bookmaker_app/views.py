@@ -1,11 +1,17 @@
+import os
 from datetime import date
 
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.urls import path
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
+from django.views.generic import TemplateView
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
 from .forms import CustomUserCreationForm, CustomLogin, KwotaForm
 from django.shortcuts import render, get_object_or_404
 from .models import Dyscyplina, Event
@@ -136,3 +142,16 @@ def wyplata(request):
         'form': form,
         'dyscypliny': Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name'),
     })
+def spin_react(request):
+    return render(request, 'index.html')
+
+class FrontendAppView(TemplateView):
+    template_name = "index.html"
+
+def get_template_names(self):
+    return [os.path.join(settings.REACT_BUILD_DIR, 'index.html')]
+
+@api_view(['GET'])
+def get_dyscypliny(request):
+    dyscypliny = ["Football", "Basketball", "Tennis"]
+    return Response(dyscypliny)

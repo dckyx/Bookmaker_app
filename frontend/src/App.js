@@ -1,9 +1,13 @@
 import React from 'react';
-import SpinPage from './components/SpinPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './routes/AppRouter';
 
 function App() {
-  return <SpinPage />;
+  return (
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  );
 }
 
 export default App;

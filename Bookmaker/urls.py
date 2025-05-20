@@ -19,18 +19,19 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from Bookmaker_app import views
-
+from Bookmaker_app.views import spin_react, get_dyscypliny
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', TemplateView.as_view(template_name="index.html")),
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
     path('user_panel/', views.user_panel, name='user_panel'),
     path('wplata/', views.wplata, name='wplata'),
     path('wyplata/', views.wyplata, name='wyplata'),
-    path("spin/", TemplateView.as_view(template_name="index.html"), name="spin"),
+    path('spin/', spin_react, name='spin'),
+    path('api/dyscypliny/', get_dyscypliny),
 
     path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
 
