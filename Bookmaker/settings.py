@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Bookmaker_app',
     "widget_tweaks",
+    'grappelli',
 ]
 
 MIDDLEWARE = [
