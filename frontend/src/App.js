@@ -1,13 +1,8 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import AppRouter from './routes/AppRouter';
+import SpinPage from './components/SpinPage';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
-  );
+  return <SpinPage />;
 }
 
 export default App;

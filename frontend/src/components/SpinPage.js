@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../components/SpinPage.css';
+import './SpinPage.css';
 import karol from '../assets/images/karol.jpeg';
 
 const prizes = [0, 2, 5, 10, 20];
@@ -17,7 +17,6 @@ function SpinPage() {
     const prizeIndex = Math.floor(Math.random() * prizes.length);
     const prize = prizes[prizeIndex];
     const degreesPerPrize = 360 / prizes.length;
-    // Obracamy koło tak, by środek wybranego segmentu znalazł się pod wskaźnikiem
     const finalAngle = 360 * 5 + (prizes.length - prizeIndex - 0.5) * degreesPerPrize;
 
     setSpinning(true);

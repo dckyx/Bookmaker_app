@@ -15,27 +15,29 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from django.views.generic import TemplateView
 
 from Bookmaker_app import views
-from Bookmaker_app.views import spin_react, get_dyscypliny
+from Bookmaker_app.views import get_dyscypliny, get_kategorie, RegisterView, ZakladyUzytkownikaView, spin_react
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="index.html")),
+    path('', views.home, name='home'),
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
     path('user_panel/', views.user_panel, name='user_panel'),
     path('wplata/', views.wplata, name='wplata'),
     path('wyplata/', views.wyplata, name='wyplata'),
-    path('spin/', spin_react, name='spin'),
+    path('spin/', views.spin_react, name='spin'),
     path('api/dyscypliny/', get_dyscypliny),
+    path('api/kategorie/', get_kategorie),
+    path('api/register/', RegisterView.as_view(), name='register'),
+    path('api/zaklady/', ZakladyUzytkownikaView.as_view(), name='zaklady-uzytkownika'),
 
     path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
 
-
-
+    re_path(r'^(?!admin|api|static|media).*$', TemplateView.as_view(template_name="index.html")),
 
 ]

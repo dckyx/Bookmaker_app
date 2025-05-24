@@ -1,5 +1,6 @@
 .custom-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
   background-color: #1f1f1f;
@@ -22,6 +23,11 @@
   gap: 15px;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
 .burger-btn {
   font-size: 24px;
@@ -30,10 +36,16 @@
   border: none;
   cursor: pointer;
 }
+.nav-link-item {
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
 
 .auth-buttons-top {
   display: flex;
   gap: 10px;
+  margin-left: auto;
 }
 
 .dropdown-menu {
@@ -86,6 +98,30 @@
 .nav-links a:hover {
   background-color: #333;
   color: #fff;
+  position: relative;
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+}
+
+.nav-links a:hover::before {
+  left: 0;
+  bottom: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.nav-links a:hover::after {
+  right: 0;
+  top: 0;
+  border-left: none;
+  border-bottom: none;
 }
 
 .spin-avatar {

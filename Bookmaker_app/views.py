@@ -10,20 +10,25 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from django.views.generic import TemplateView
 from rest_framework.decorators import api_view
+from rest_framework import status
+from rest_framework.views import APIView
 from rest_framework.response import Response
-
+from rest_framework.permissions import IsAuthenticated
 from .forms import CustomUserCreationForm, CustomLogin, KwotaForm
 from django.shortcuts import render, get_object_or_404
 from .models import Dyscyplina, Event
+from .serializers import *
 
 
 from .models import *
 
 def home(request):
     najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).order_by('datetime')[:5]
+    kategorie = Kategoria.objects.prefetch_related('dyscyplina_set').all()
     dyscypliny = Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name')
-    return render(request, 'Bookmaker_app/home.html', {
+    return render(request, 'bookmaker_app/home.html', {
         'najblizsze_mecze': najblizsze_mecze,
+        'kategorie': kategorie,
         'dyscypliny': dyscypliny,
     })
 
@@ -61,12 +66,14 @@ def user_panel(request):
     zaklady = ZakladyUzytkownika.objects.filter(user=request.user)
     transakcje = HistoriaTransakcji.objects.filter(user=request.user)
     modal_message = request.session.pop('modal_message', None)
+    kategorie = Kategoria.objects.prefetch_related('dyscyplina_set').all()
     return render(request, 'bookmaker_app/user_panel.html', {
         'zaklady': zaklady,
         'transakcje': transakcje,
         'saldo': request.user.saldo,
         'modal_message': modal_message,
         'dyscypliny': Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name'),
+        'kategorie': kategorie,
     })
 
 
@@ -153,5 +160,28 @@ def get_template_names(self):
 
 @api_view(['GET'])
 def get_dyscypliny(request):
-    dyscypliny = ["Football", "Basketball", "Tennis"]
-    return Response(dyscypliny)
+    dyscypliny = Dyscyplina.objects.all().order_by('name')
+    serializer = DyscyplinaSerializer(dyscypliny, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def get_kategorie(request):
+    kategorie = Kategoria.objects.all().order_by('name')
+    serializer = KategoriaSerializer(kategorie, many=True)
+    return Response(serializer.data)
+
+class RegisterView(APIView):
+    def post(self, request):
+        serializer = RegisterSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Użytkownik zarejestrowany pomyślnie."}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ZakladyUzytkownikaView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        zaklady = ZakladyUzytkownika.objects.filter(user=request.user)
+        serializer = ZakladUzytkownikaSerializer(zaklady, many=True)
+        return Response(serializer.data)
