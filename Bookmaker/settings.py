@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Bookmaker_app',
+    "corsheaders",
     "widget_tweaks",
+    'grappelli',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+
 ]
 
 ROOT_URLCONF = 'Bookmaker.urls'
@@ -149,6 +153,9 @@ DATABASES = {
     }
 }
 
+# to od reacta
+TEMPLATES[0]['DIRS'] = [BASE_DIR / 'frontend' / 'build']
+STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
 
 # # CSRF and session cookie settings for development
 # CSRF_COOKIE_HTTPONLY = False
