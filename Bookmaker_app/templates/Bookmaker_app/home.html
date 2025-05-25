@@ -35,7 +35,7 @@
     </main>
     <aside class="left-panel">
       {% for d in dyscypliny %}
-        <a href="{% url 'dyscyplina' d.name %}" class="btn btn-lg btn-custom">{{ d.name|title }}</a>
+        <a href="{% url 'dyscyplina' d %}" class="btn btn-lg btn-custom">{{ d|title }}</a>
       {% endfor %}
     </aside>
     <aside class="sidebar-right">
