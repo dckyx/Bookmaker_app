@@ -2,17 +2,37 @@
 {% load static %}
 
 {% block content %}
-<div class="custom-card p-4">
-  <h2 class="mb-4 text-center">💸 Wpłata środków</h2>
-  <form method="post" class="text-light">
+<div class="card themed-panel shadow p-4 mx-auto" style="max-width: 500px;">
+  <h2 class="mb-4 text-center" style="color: var(--text-color);">💸 Wpłata środków</h2>
+  <form method="post">
     {% csrf_token %}
     <div class="mb-3">
-      {{ form.kwota.label_tag }}
-      {{ form.kwota }}
+      <label for="{{ form.kwota.id_for_label }}" class="form-label" style="color: var(--text-color);">Kwota</label>
+      <div class="input-group">
+        <input type="number" name="{{ form.kwota.name }}" step="0.01"
+               class="form-control themed-panel" id="{{ form.kwota.id_for_label }}"
+               placeholder="Kwota">
+        <span class="input-group-text themed-panel">zł</span>
+      </div>
     </div>
     <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-success w-100">Wpłać</button>
+      <button type="submit" class="btn custom-wplata w-50 py-2 fs-5">
+        💰 Wpłać
+      </button>
     </div>
   </form>
 </div>
+
+<style>
+.custom-wplata {
+  background-color: #b6f2c0;
+  color: #000;
+  border: 2px solid #6fdd8b;
+  transition: background-color 0.3s, color 0.3s;
+}
+.custom-wplata:hover {
+  background-color: #6fdd8b !important;
+  color: #fff !important;
+}
+</style>
 {% endblock %}

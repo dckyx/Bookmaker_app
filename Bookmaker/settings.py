@@ -45,7 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Bookmaker_app',
+    "corsheaders",
+    'rest_framework',
     "widget_tweaks",
+    'grappelli',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+
 ]
 
 ROOT_URLCONF = 'Bookmaker.urls'
@@ -71,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Bookmaker_app.context_processors.global_kategorie_dyscypliny',
             ],
         },
     },
@@ -125,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
 
@@ -149,9 +157,31 @@ DATABASES = {
     }
 }
 
+# to od reacta
+
+TEMPLATES[0]['DIRS'] = [
+    BASE_DIR / "frontend" / "build",
+    BASE_DIR / "Bookmaker_app" / "templates",  # ważne
+]
+STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
 
 # # CSRF and session cookie settings for development
 # CSRF_COOKIE_HTTPONLY = False
 # CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000']
 # CSRF_COOKIE_SECURE = False
 # SESSION_COOKIE_SECURE = False
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+]

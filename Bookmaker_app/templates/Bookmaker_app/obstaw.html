@@ -1,0 +1,53 @@
+{% extends 'bookmaker_app/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="card p-4 shadow-lg themed-panel">
+    <h2 class="mb-4 text-center">Obstawiasz mecz: {{ event.name }}</h2>
+
+    <div class="row mb-4">
+      <div class="col-md-6 text-center">
+        <h4>{{ event.druzyna1.name }}</h4>
+        <div style="color: var(--text-color); opacity: 0.85;">Kurs: 1.85</div>
+      </div>
+      <div class="col-md-6 text-center">
+        <h4>{{ event.druzyna2.name }}</h4>
+        <div style="color: var(--text-color); opacity: 0.85;">Kurs: 2.20</div>
+      </div>
+    </div>
+
+    {% if saldo_niewystarczajace %}
+      <div class="alert alert-danger text-center" role="alert">
+        Nie masz wystarczająco środków na koncie, aby obstawić ten zakład.
+      </div>
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="team" class="form-label">Wybierz drużynę</label>
+        <select id="team" name="team" class="form-select themed-panel" required>
+          <option value="">-- wybierz --</option>
+          <option value="{{ event.druzyna1.id }}">{{ event.druzyna1.name }}</option>
+          <option value="{{ event.druzyna2.id }}">{{ event.druzyna2.name }}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        {{ form.wartosc.label_tag }}
+        {{ form.wartosc|add_class:"form-control themed-panel" }}
+        {% if form.wartosc.errors %}
+          <div class="text-danger">{{ form.wartosc.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="text-end">
+        <button type="submit" class="btn btn-success">
+          <i class="bi bi-currency-dollar"></i> Obstaw
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
