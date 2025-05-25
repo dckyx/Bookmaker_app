@@ -17,3 +17,12 @@ from django import forms
 
 class KwotaForm(forms.Form):
     kwota = forms.DecimalField(label="Kwota (zł)", min_value=0.01, max_digits=10, decimal_places=2)
+
+class ZakladForm(forms.Form):
+    wartosc = forms.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        min_value=1,
+        label='Wartość zakładu',
+        widget=forms.NumberInput(attrs={'class': 'form-control'})
+    )

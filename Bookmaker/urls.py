@@ -33,11 +33,12 @@ urlpatterns = [
     path('spin/', views.spin_react, name='spin'),
     path('api/dyscypliny/', get_dyscypliny),
     path('api/kategorie/', get_kategorie),
-    path('api/register/', RegisterView.as_view(), name='register'),
+    path('api/register/', views.register, name='register'),
     path('api/zaklady/', ZakladyUzytkownikaView.as_view(), name='zaklady-uzytkownika'),
 
+    path('obstaw/<int:event_id>/', views.obstaw_mecz, name='obstaw_mecz'),
     path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
 
-    re_path(r'^(?!admin|api|static|media).*$', TemplateView.as_view(template_name="index.html")),
+    # re_path(r'^(?!admin|api|static|media).*$',TemplateView.as_view(template_name="index.html") ),
 
 ]

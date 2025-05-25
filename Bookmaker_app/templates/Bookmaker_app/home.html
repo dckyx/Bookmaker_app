@@ -5,5 +5,55 @@
   <div class="text-center mt-5">
     <h1>Witamy w serwisie bukmacherskim!</h1>
     <p>Wybierz zakład po lewej stronie lub zaloguj się aby obstawiać mecze.</p>
+    {% if najblizsze_mecze %}
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Najbliższe wydarzenia</h2>
+        <ul class="list-group">
+          {% for wydarzenie in najblizsze_mecze %}
+            <li class="list-group-item themed-panel border-light mb-3 rounded shadow-sm text-start" style="background-color: rgba(255, 255, 255, 0.05);">
+              <div class="row align-items-center">
+                <div class="col-md-4 small">
+                  <h5 class="mb-2">
+                    <i class="bi bi-trophy-fill me-2 text-warning"></i>{{ wydarzenie.name }}
+                  </h5>
+                  <p class="mb-1">
+                    <i class="bi bi-calendar-event me-2 text-info"></i>
+                    <strong>Data:</strong> {{ wydarzenie.datetime }}
+                  </p>
+                  <p class="mb-1">
+                    <i class="bi bi-flag-fill me-2 text-danger"></i>
+                    <strong>Status:</strong> {{ wydarzenie.status }}
+                  </p>
+                </div>
+                <div class="col-md-2 text-center">
+                  <div class="fw-bold">{{ wydarzenie.druzyna1.name }}</div>
+                  <div class="small" style="color: var(--text-color); opacity: 0.85;">Kurs: 1.85</div>
+                </div>
+                <div class="col-md-2 text-center display-6">
+                  {{ wydarzenie.wynik_druzyna1|default:"?" }} : {{ wydarzenie.wynik_druzyna2|default:"?" }}
+                </div>
+                <div class="col-md-2 text-center">
+                  <div class="fw-bold">{{ wydarzenie.druzyna2.name }}</div>
+                  <div class="small" style="color: var(--text-color); opacity: 0.85;">Kurs: 2.20</div>
+                </div>
+                <div class="col-md-2 text-end">
+                    {% if user.is_authenticated %}
+                      <a href="{% url 'obstaw_mecz' wydarzenie.id %}" class="btn btn-lg btn-outline-success">
+                        <i class="bi bi-currency-dollar"></i> Obstaw
+                      </a>
+                    {% else %}
+                      <a href="{% url 'login' %}?next={% url 'obstaw_mecz' wydarzenie.id %}" class="btn btn-lg btn-outline-success">
+                        <i class="bi bi-currency-dollar"></i> Obstaw
+                      </a>
+                    {% endif %}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% else %}
+      <p class="text-center mt-4">Brak nadchodzących wydarzeń.</p>
+    {% endif %}
   </div>
 {% endblock %}

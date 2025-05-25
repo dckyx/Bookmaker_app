@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SpinPage.css';
+import '../assets/styles/spinpage.css';
 import karol from '../assets/images/karol.jpeg';
 
 const prizes = [0, 2, 5, 10, 20];
