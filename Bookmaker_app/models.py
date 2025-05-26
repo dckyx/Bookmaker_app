@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.contrib.auth.models import User
+from decimal import Decimal
 
 # Create your models here.
 class CustomUserManager(BaseUserManager):
@@ -69,6 +70,8 @@ class Event(models.Model):
     status = models.CharField(max_length=50)
     wynik_druzyna1 = models.CharField(max_length=50)
     wynik_druzyna2 = models.CharField(max_length=50)
+    kurs_druzyna1 = models.DecimalField(max_digits=10, decimal_places=2, default=1)
+    kurs_druzyna2 = models.DecimalField(max_digits=10, decimal_places=2, default=1)
 
     def __str__(self):
         return f"Event {self.id}, wynik {self.druzyna1}: {self.wynik_druzyna1} - {self.wynik_druzyna2}: {self.druzyna2}"
@@ -107,6 +110,17 @@ class ZakladyUzytkownika(models.Model):
     wartosc = models.DecimalField(max_digits=10, decimal_places=2)
     wynik = models.CharField(max_length=100)
     stworzono = models.DateTimeField(auto_now_add=True)
+    kurs = models.DecimalField(max_digits=10, decimal_places=2)
+    event1 = models.ForeignKey(Event, on_delete=models.CASCADE)
+    wytypowany = models.CharField(max_length=100)
+    #wygrana = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+
+    @property
+    def wygrana(self):
+        if self.wartosc and self.kurs:
+            return self.wartosc * self.kurs
+        return Decimal('0.00')
+
 
     def __str__(self):
         return f"Zakład {self.id} użytkownika {self.user.username}"

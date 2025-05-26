@@ -190,12 +190,17 @@ def obstaw_mecz(request, event_id):
         form = ZakladForm(request.POST)
         if form.is_valid():
             wartosc = form.cleaned_data['wartosc']
+            kurs = form.cleaned_data['kurs']
+            wytypowany = form.cleaned_data['wytypowany']
 
             if request.user.saldo >= wartosc:
                 ZakladyUzytkownika.objects.create(
                     user=request.user,
                     wartosc=wartosc,
                     wynik='w trakcie',
+                    kurs=kurs,
+                    event1=event,
+                    wytypowany=wytypowany
                 )
                 request.user.saldo -= wartosc
                 request.user.save()

@@ -246,8 +246,8 @@
                   <a href="{% url 'home' %}">
                     <img src="{% static 'bookmaker_app/images/logo_header.jpg' %}" alt="logo_header_bookmaker" class="logo" style="border-radius: 30px">
                   </a>
-                  <a href="{% url 'user_panel' %}" class="link_but_button">Zakłady</a>
-                  <a href="#" class="link_but_button">Na Żywo</a>
+                  <a href="{% url 'home' %}" class="link_but_button">Zakłady</a>
+                  <a href="{% url 'home' %}" class="link_but_button">Na Żywo</a>
                   <a href="{% url 'spin' %}" class="link_but_button">
                     <img id="karol-img" src="{% static 'bookmaker_app/images/karol.jpeg' %}" alt="spin" class="logo" style="width: 70px; border-radius: 50px">
                   </a>
@@ -263,6 +263,7 @@
                   {{ request.user.saldo|default:"0.00" }} zł
                 </div>
               </div>
+              <a href="{% url 'user_panel' %}" class="link_but_button">Profil</a>
             <a href="{% url 'logout' %}" class="link_but_button">Wyloguj się</a>
 
           {% else %}
@@ -293,11 +294,11 @@
                 Zakład nr {{ zaklad.id }}
               </h6>
               <div class="d-flex flex-column small" style="color: var(--text-color);">
-                <div class="mb-1"><strong>Drużyna obstawiona:</strong> {{ zaklad.druzyna.name|default:"?" }}</div>
-                <div class="mb-1"><strong>Mecz:</strong> {{ zaklad.event.druzyna1.name }} vs {{ zaklad.event.druzyna2.name }}</div>
+                <div class="mb-1"><strong>Drużyna obstawiona:</strong> {{ zaklad.wytypowany |default:"?" }}</div>
+                <div class="mb-1"><strong>Mecz:</strong> {{ zaklad.event1.druzyna1.name }} vs {{ zaklad.event1.druzyna2.name }}</div>
                 <div class="mb-1"><strong>Kurs:</strong> {{ zaklad.kurs|default:"?" }}</div>
                 <div class="mb-1"><strong>Stawka:</strong> {{ zaklad.wartosc }} zł</div>
-                <div><strong>Do wygrania:</strong> {{ zaklad.wartosc|default_if_none:0|floatformat:2|floatformat|floatformat|floatformat|add:0|floatformat:"2" }} zł</div>
+                <div><strong>Do wygrania:</strong> {{ zaklad.wygrana }} zł</div>
               </div>
             </div>
           </div>

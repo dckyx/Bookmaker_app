@@ -30,14 +30,14 @@
                     </div>
                     <div class="col-md-2 text-center">
                       <div class="fw-bold">{{ wydarzenie.druzyna1.name }}</div>
-                      <div class="small" style="color: var(--text-color); opacity: 0.85;">Kurs: 1.85</div>
+                      <div class="small" style="color: var(--text-color); opacity: 0.85;">{{event.kurs_druzyna1}}</div>
                     </div>
                     <div class="col-md-2 text-center display-6">
                       {{ wydarzenie.wynik_druzyna1|default:"?" }} : {{ wydarzenie.wynik_druzyna2|default:"?" }}
                     </div>
                     <div class="col-md-2 text-center">
                       <div class="fw-bold">{{ wydarzenie.druzyna2.name }}</div>
-                      <div class="small" style="color: var(--text-color); opacity: 0.85;">Kurs: 2.20</div>
+                      <div class="small" style="color: var(--text-color); opacity: 0.85;">{{event.kurs_druzyna2}}</div>
                     </div>
                     <div class="col-md-2 text-end">
                         {% if user.is_authenticated %}
