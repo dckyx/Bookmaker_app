@@ -26,3 +26,5 @@ class ZakladForm(forms.Form):
         label='Wartość zakładu',
         widget=forms.NumberInput(attrs={'class': 'form-control'})
     )
+    wytypowany = forms.IntegerField(widget=forms.HiddenInput())
+    kurs = forms.DecimalField(widget=forms.HiddenInput())

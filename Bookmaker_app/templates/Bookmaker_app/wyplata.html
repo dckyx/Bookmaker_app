@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="card themed-panel shadow p-4 mx-auto" style="max-width: 500px;">
-  <h2 class="mb-4 text-center" style="color: var(--text-color);">🏧 Wypłata środków</h2>
+  <h2 class="mb-4 text-center" style="color: var(--text-color);"><i class="bi bi-cash-coin me-2 text-success"></i>Wypłata środków</h2>
   <form method="post">
     {% csrf_token %}
     <div class="mb-3">
@@ -17,7 +17,7 @@
     </div>
     <div class="d-flex justify-content-center">
       <button type="submit" class="btn custom-wyplata w-50 py-2 fs-5">
-        🏧 Wypłać
+        <i class="bi bi-wallet2 me-1 text-danger"></i>Wypłać
       </button>
     </div>
   </form>

@@ -192,6 +192,8 @@ def obstaw_mecz(request, event_id):
             wartosc = form.cleaned_data['wartosc']
             kurs = form.cleaned_data['kurs']
             wytypowany = form.cleaned_data['wytypowany']
+            from .models import Drużyna
+            wytypowany = Drużyna.objects.get(pk=wytypowany)
 
             if request.user.saldo >= wartosc:
                 ZakladyUzytkownika.objects.create(

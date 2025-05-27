@@ -112,8 +112,8 @@ class ZakladyUzytkownika(models.Model):
     stworzono = models.DateTimeField(auto_now_add=True)
     kurs = models.DecimalField(max_digits=10, decimal_places=2)
     event1 = models.ForeignKey(Event, on_delete=models.CASCADE)
-    wytypowany = models.CharField(max_length=100)
-    #wygrana = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+    wytypowany = models.ForeignKey(Drużyna, on_delete=models.CASCADE)
+    # wygrana = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
 
     @property
     def wygrana(self):
