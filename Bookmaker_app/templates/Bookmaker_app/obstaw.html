@@ -42,6 +42,8 @@
         {% endif %}
       </div>
 
+      <input type="hidden" name="wytypowany" id="hidden-wytypowany">
+      <input type="hidden" name="kurs" id="hidden-kurs">
       <div class="text-end">
         <button type="submit" class="btn btn-success">
           <i class="bi bi-currency-dollar"></i> Obstaw
@@ -50,4 +52,25 @@
     </form>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const select = document.getElementById('team');
+    const hiddenTeam = document.getElementById('hidden-wytypowany');
+    const hiddenKurs = document.getElementById('hidden-kurs');
+
+    const kurs1 = parseFloat("{{ event.kurs_druzyna1|default:1.0 }}");
+    const kurs2 = parseFloat("{{ event.kurs_druzyna2|default:1.0 }}");
+
+    select.addEventListener('change', function () {
+      const selected = select.value;
+      if (selected === "{{ event.druzyna1.id|stringformat:'s' }}") {
+        hiddenTeam.value = selected;
+        hiddenKurs.value = kurs1;
+      } else if (selected === "{{ event.druzyna2.id|stringformat:'s' }}") {
+        hiddenTeam.value = selected;
+        hiddenKurs.value = kurs2;
+      }
+    });
+  });
+</script>
 {% endblock %}
