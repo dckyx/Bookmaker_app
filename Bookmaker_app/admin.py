@@ -5,6 +5,7 @@ from .models import CustomUser
 from .models import *
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group, Permission
+from .models import Event, ZakladyUzytkownika
 
 
 
@@ -12,6 +13,24 @@ from django.contrib.auth.models import Group, Permission
 
 
 # Register your models here.
+@admin.action(description="Rozlicz zakłady dla wybranych wydarzeń")
+def rozlicz_zaklady(modeladmin, request, queryset):
+    licznik = 0
+    for event in queryset:
+        if not event.wynik_druzyna1 or not event.wynik_druzyna2:
+            continue
+        zaklady = ZakladyUzytkownika.objects.filter(event1=event, wynik='w trakcie')
+        for zaklad in zaklady:
+            zaklad.rozlicz()
+            licznik += 1
+    modeladmin.message_user(request, f"Rozliczono {licznik} zakładów.")
+
+@admin.action(description="Zaktualizuj status wydarzenia")
+def aktualizuj_status(modeladmin, request, queryset):
+    for event in queryset:
+        event.aktualizuj_status()
+    modeladmin.message_user(request, "Statusy wydarzeń zostały zaktualizowane.")
+
 
 @admin.register(Drużyna)
 class DruzynaAdmin(admin.ModelAdmin):
@@ -57,6 +76,7 @@ class EventAdmin(admin.ModelAdmin):
     list_filter = ('name','datetime','status')
     search_fields = ('name','datetime','dyscyplina','druzyna1','druzyna2','status')
     ordering = ('datetime','status')
+    actions = [rozlicz_zaklady, aktualizuj_status]
 
 @admin.register(Kategoria)
 class KategoriaAdmin(admin.ModelAdmin):

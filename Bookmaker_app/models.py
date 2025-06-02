@@ -2,8 +2,12 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.contrib.auth.models import User
 from decimal import Decimal
+from datetime import timedelta
+from django.utils import timezone
 
 # Create your models here.
+
+
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, username, password=None, **extra_fields):
         if not email:
@@ -62,12 +66,18 @@ class Drużyna(models.Model):
 
 
 class Event(models.Model):
+    STATUSY = (
+        ('nadchodzacy', 'Nadchodzący'),
+        ('trwa', 'Trwa'),
+        ('zakonczony', 'Zakończony'),
+    )
+
     name = models.CharField(max_length=250)
-    datetime = models.DateField()
+    datetime = models.DateTimeField()
     dyscyplina = models.ForeignKey(Dyscyplina, on_delete=models.CASCADE)
-    druzyna1 = models.ForeignKey(Drużyna, on_delete=models.CASCADE,related_name='druzyna1')
-    druzyna2 = models.ForeignKey(Drużyna, on_delete=models.CASCADE,related_name="druzyna2")
-    status = models.CharField(max_length=50)
+    druzyna1 = models.ForeignKey(Drużyna, on_delete=models.CASCADE, related_name='druzyna1')
+    druzyna2 = models.ForeignKey(Drużyna, on_delete=models.CASCADE, related_name='druzyna2')
+    status = models.CharField(max_length=20, choices=STATUSY, default='nadchodzacy')
     wynik_druzyna1 = models.CharField(max_length=50)
     wynik_druzyna2 = models.CharField(max_length=50)
     kurs_druzyna1 = models.DecimalField(max_digits=10, decimal_places=2, default=1)
@@ -76,6 +86,30 @@ class Event(models.Model):
     def __str__(self):
         return f"Event {self.id}, wynik {self.druzyna1}: {self.wynik_druzyna1} - {self.wynik_druzyna2}: {self.druzyna2}"
 
+    @property
+    def is_future(self):
+        return self.datetime > timezone.now()
+
+    @property
+    def is_live(self):
+        now = timezone.now()
+        return self.datetime <= now < self.datetime + timedelta(hours=2)
+
+    @property
+    def is_finished(self):
+        return timezone.now() > self.datetime + timedelta(hours=2)
+
+    def aktualizuj_status(self):
+        teraz = timezone.now()
+
+        if self.is_future:
+            self.status = "nadchodzacy"
+        elif self.is_live:
+            self.status = "trwa"
+        else:
+            self.status = "zakonczony"
+
+        self.save()
 
 class Stream(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
@@ -121,7 +155,35 @@ class ZakladyUzytkownika(models.Model):
             return self.wartosc * self.kurs
         return Decimal('0.00')
 
+    def rozlicz(self):
+        event = self.event1
 
+        # Upewnij się, że wyniki są ustawione
+        if event.wynik_druzyna1 is None or event.wynik_druzyna2 is None:
+            return  # Nie rozliczaj jeszcze
+
+        try:
+            wynik1 = int(event.wynik_druzyna1)
+            wynik2 = int(event.wynik_druzyna2)
+        except ValueError:
+            return  # Wyniki są nieprawidłowe (np. tekstowe)
+
+        if wynik1 > wynik2:
+            zwyciezca = event.druzyna1
+        elif wynik2 > wynik1:
+            zwyciezca = event.druzyna2
+        else:
+            zwyciezca = None  # Remis
+
+        if zwyciezca == self.wytypowany:
+            wygrana = self.wartosc * self.kurs
+            self.user.saldo += wygrana
+            self.user.save()
+            self.wynik = 'wygrany'
+        else:
+            self.wynik = 'przegrany'
+
+        self.save()
     def __str__(self):
         return f"Zakład {self.id} użytkownika {self.user.username}"
 

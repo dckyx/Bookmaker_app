@@ -23,7 +23,7 @@ from .serializers import *
 from .models import *
 
 def home(request):
-    najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).order_by('datetime')[:5]
+    najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).exclude(status='zakonczony').order_by('datetime')[:5]
     return render(request, 'bookmaker_app/home.html', {
         'najblizsze_mecze': najblizsze_mecze,
     })
@@ -80,8 +80,7 @@ def dyscyplina(request, nazwa):
     # Pobieramy dyscyplinę po nazwie
     dyscyplina_obj = get_object_or_404(Dyscyplina, name=nazwa)
 
-    # Pobieramy wydarzenia powiązane z tą dyscypliną
-    wydarzenia = Event.objects.filter(dyscyplina=dyscyplina_obj)
+    wydarzenia = Event.objects.filter(datetime__gte=date.today()).exclude(status='zakonczony').order_by('datetime')
 
     return render(request, template_name, {
         'nazwa': nazwa,
