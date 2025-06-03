@@ -45,13 +45,21 @@
 .expandable {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  padding: 0 !important;
+  border: none !important;
   opacity: 0;
+  margin: 0 !important;
+  height: 0 !important;
+  transition: all 0.5s ease-in-out;
 }
 
 .expandable.show {
-  max-height: 200px;
+  max-height: 1000px;
   opacity: 1;
+  padding: 1.25rem;
+  margin-bottom: 0.5rem !important;
+  height: auto !important;
+  border: 1px solid var(--link-hover-border) !important;
 }
 </style>
 
@@ -60,21 +68,22 @@
             <ul class="list-group" id="zaklady-list">
                 {% with zaklady|dictsortreversed:"stworzono" as zaklady %}
                 {% for zaklad in zaklady %}
-                    <li class="list-group-item themed-panel border border-secondary-subtle rounded shadow-sm mb-2 expandable extra-zaklad {% if forloop.counter <= 5 %}show{% endif %}">
+                    <li class="list-group-item themed-panel border rounded shadow-sm mb-2 expandable extra-zaklad {% if forloop.counter <= 5 %}show{% endif %}" style="border-color: var(--link-hover-border); padding: 1.5rem 2rem;">
                         <div class="small" style="color: var(--text-color);">
                             <strong>Stawka:</strong> {{ zaklad.wartosc }} zł<br>
                             <strong>Status:</strong> {{ zaklad.wynik }}<br>
+                            <strong>Do wygrania:</strong> {{ zaklad.potencjalna_wygrana }} zł<br>
                             <strong>Data:</strong> {{ zaklad.stworzono|date:"Y-m-d H:i" }}
 {#                            <strong>Potencjalna wygrana:</strong> {{ zaklad. }}#}
                         </div>
                     </li>
                 {% empty %}
-                    <li class="list-group-item themed-panel border border-secondary-subtle rounded shadow-sm">Nie masz żadnych zakładów.</li>
+                    <li class="list-group-item themed-panel border rounded shadow-sm" style="border-color: var(--link-hover-border); padding: 1.5rem 2rem;">Nie masz żadnych zakładów.</li>
                 {% endfor %}
                 {% endwith %}
             </ul>
             {% if zaklady|length > 5 %}
-                <div class="text-center mt-2">
+                <div class="text-center mt-3" style="margin-top: 10px;">
                     <button id="zaklady-btn" class="btn btn-sm themed-panel border border-light-subtle" onclick="toggleZaklady()">Pokaż więcej</button>
                 </div>
             {% endif %}
@@ -85,7 +94,7 @@
             <ul class="list-group" id="transakcje-list">
                 {% with transakcje|dictsortreversed:"stworzono" as transakcje %}
                 {% for transakcja in transakcje %}
-                    <li class="list-group-item themed-panel border border-secondary-subtle rounded shadow-sm mb-2 expandable extra-transakcja {% if forloop.counter <= 5 %}show{% endif %}">
+                    <li class="list-group-item themed-panel border rounded shadow-sm mb-2 expandable extra-transakcja {% if forloop.counter <= 5 %}show{% endif %}" style="border-color: var(--link-hover-border); padding: 1.5rem 2rem;">
                         <div class="small" style="color: var(--text-color);">
                             <strong>{{ transakcja.typ }}</strong> – {{ transakcja.wartosc }} zł<br>
                             <strong>Opis:</strong> {{ transakcja.opis }}<br>
@@ -93,12 +102,12 @@
                         </div>
                     </li>
                 {% empty %}
-                    <li class="list-group-item themed-panel border border-secondary-subtle rounded shadow-sm">Brak transakcji.</li>
+                    <li class="list-group-item themed-panel border rounded shadow-sm" style="border-color: var(--link-hover-border); padding: 1.5rem 2rem;">Brak transakcji.</li>
                 {% endfor %}
                 {% endwith %}
             </ul>
             {% if transakcje|length > 5 %}
-                <div class="text-center mt-2">
+                <div class="text-center mt-3" style="margin-top: 10px;">
                     <button id="transakcje-btn" class="btn btn-sm themed-panel border border-light-subtle" onclick="toggleTransakcje()">Pokaż więcej</button>
                 </div>
             {% endif %}

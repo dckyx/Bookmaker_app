@@ -21,6 +21,8 @@ from .serializers import *
 
 
 from .models import *
+from .utils import przelicz_i_zapisz_kursy
+
 
 def home(request):
     najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).exclude(status='zakonczony').order_by('datetime')[:5]
@@ -66,6 +68,8 @@ def user_panel(request):
     zaklady = ZakladyUzytkownika.objects.filter(user=request.user)
     transakcje = HistoriaTransakcji.objects.filter(user=request.user)
     modal_message = request.session.pop('modal_message', None)
+    for z in zaklady:
+        z.potencjalna_wygrana = round(z.wartosc * z.kurs, 2)
     return render(request, 'bookmaker_app/user_panel.html', {
         'zaklady': zaklady,
         'transakcje': transakcje,
@@ -80,7 +84,10 @@ def dyscyplina(request, nazwa):
     # Pobieramy dyscyplinę po nazwie
     dyscyplina_obj = get_object_or_404(Dyscyplina, name=nazwa)
 
-    wydarzenia = Event.objects.filter(datetime__gte=date.today()).exclude(status='zakonczony').order_by('datetime')
+    wydarzenia = Event.objects.filter(
+        datetime__gte=date.today(),
+        dyscyplina=dyscyplina_obj
+    ).exclude(status='zakonczony').order_by('datetime')
 
     return render(request, template_name, {
         'nazwa': nazwa,
@@ -214,6 +221,7 @@ def obstaw_mecz(request, event_id):
                 )
 
                 request.session['modal_message'] = 'Zakład został obstawiony.'
+                przelicz_i_zapisz_kursy(event)
                 return redirect('user_panel')
             else:
                 form.add_error(None, 'Nie masz wystarczającej ilości środków.')
