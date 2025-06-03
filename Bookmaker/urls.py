@@ -39,6 +39,6 @@ urlpatterns = [
     path('obstaw/<int:event_id>/', views.obstaw_mecz, name='obstaw_mecz'),
     path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
 
-    # re_path(r'^(?!admin|api|static|media).*$',TemplateView.as_view(template_name="index.html") ),
+    re_path(r'^(?!admin|api|static|media).*$',TemplateView.as_view(template_name="index.html") ),
 
 ]

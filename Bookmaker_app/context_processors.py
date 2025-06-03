@@ -5,7 +5,7 @@ def global_kategorie_dyscypliny(request):
     dyscypliny = Dyscyplina.objects.exclude(name__isnull=True).exclude(name__exact='').order_by('name')
     aktywne = []
     if request.user.is_authenticated:
-        aktywne = request.user.zakladyuzytkownika_set.filter(wynik='w trakcie').order_by('-stworzono')[:3]
+        aktywne = request.user.zakladyuzytkownika_set.filter(wynik='w trakcie').order_by('-stworzono')
     return {
         'kategorie': kategorie,
         'dyscypliny': dyscypliny,
