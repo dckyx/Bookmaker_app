@@ -26,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-h#z396b6#pv+pyu3$m+*7#)=h#ai@ww@*hz$45&!5z7mr^(p6%'
-SECRET_KEY = config('DJANGO_SECRET_KEY')
-
+# SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://bookmaker-project-48b16b55ee1c.herokuapp.com', '127.0.0.1']
 
 AUTH_USER_MODEL = 'Bookmaker_app.CustomUser'
 
@@ -135,6 +135,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
+MEDIA_URL = "static/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
