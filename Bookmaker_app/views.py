@@ -237,3 +237,6 @@ def obstaw_mecz(request, event_id):
         'form': form,
         'event': event
     })
+
+def custom_404(request, exception=None):
+    return render(request, 'Bookmaker_app/templates/404.html', status=404)
