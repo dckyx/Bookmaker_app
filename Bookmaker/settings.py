@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
 from pathlib import Path
-
+import dj_database_url
 from decouple import config
 
 # pip install python-cośtam cośtam
@@ -132,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
 
@@ -163,7 +163,7 @@ TEMPLATES[0]['DIRS'] = [
     BASE_DIR / "frontend" / "build",
     BASE_DIR / "Bookmaker_app" / "templates",  # ważne
 ]
-STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
+# STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
 
 # # CSRF and session cookie settings for development
 # CSRF_COOKIE_HTTPONLY = False
@@ -185,4 +185,12 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
 handler404 = 'Bookmaker_app.views.custom_404'
+
+DATABASES = {
+    'default': dj_database_url.config()
+}
