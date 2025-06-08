@@ -69,8 +69,7 @@ ROOT_URLCONF = 'Bookmaker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'Bookmaker_app' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -159,12 +158,11 @@ DATABASES = {
     }
 }
 
-# to od reacta
-
-TEMPLATES[0]['DIRS'] = [
-    BASE_DIR / "Bookmaker_app" / "templates",
-    BASE_DIR / "frontend" / "build",
-]
+## to od reacta
+# TEMPLATES[0]['DIRS'] = [
+#     BASE_DIR / "Bookmaker_app" / "templates",
+#     BASE_DIR / "frontend" / "build",
+# ]
 STATICFILES_DIRS = [
     BASE_DIR / 'frontend' / 'build' / 'static',
     BASE_DIR / 'Bookmaker_app' / 'static',
@@ -176,9 +174,9 @@ STATICFILES_DIRS = [
 # SESSION_COOKIE_SECURE = False
 
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
+    'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-    )
+    ]
 }
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
