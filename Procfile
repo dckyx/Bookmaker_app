@@ -1,1 +1,1 @@
-web: gunicorn Bookmaker.wsgi -log-file -
+web: gunicorn Bookmaker.wsgi
