@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
 AUTH_USER_MODEL = 'Bookmaker_app.CustomUser'
 
@@ -162,10 +162,10 @@ DATABASES = {
 # to od reacta
 
 TEMPLATES[0]['DIRS'] = [
+    BASE_DIR / "Bookmaker_app" / "templates",
     BASE_DIR / "frontend" / "build",
-    BASE_DIR / "Bookmaker_app" / "templates",  # ważne
 ]
-# STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
 
 # # CSRF and session cookie settings for development
 # CSRF_COOKIE_HTTPONLY = False
@@ -182,10 +182,12 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://bookmaker-project-48b16b55ee1c.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
+    'https://bookmaker-project-48b16b55ee1c.herokuapp.com',
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
