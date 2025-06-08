@@ -165,8 +165,10 @@ TEMPLATES[0]['DIRS'] = [
     BASE_DIR / "Bookmaker_app" / "templates",
     BASE_DIR / "frontend" / "build",
 ]
-STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'build' / 'static']
-
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend' / 'build' / 'static',
+    BASE_DIR / 'Bookmaker_app' / 'static',
+]
 # # CSRF and session cookie settings for development
 # CSRF_COOKIE_HTTPONLY = False
 # CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000']
