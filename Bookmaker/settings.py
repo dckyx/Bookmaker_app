@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-h#z396b6#pv+pyu3$m+*7#)=h#ai@ww@*hz$45&!5z7mr^(p6%'
-# SECRET_KEY = config('DJANGO_SECRET_KEY')
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('DJANGO_SECRET_KEY')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -69,7 +69,8 @@ ROOT_URLCONF = 'Bookmaker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'Bookmaker_app' / 'templates'],
+        'DIRS': [BASE_DIR / 'templates']
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -158,11 +159,16 @@ DATABASES = {
     }
 }
 
-## to od reacta
+# to od reacta
+
+#
 # TEMPLATES[0]['DIRS'] = [
 #     BASE_DIR / "Bookmaker_app" / "templates",
 #     BASE_DIR / "frontend" / "build",
 # ]
+TEMPLATES[0]['DIRS'] = [
+    BASE_DIR / "Bookmaker_app" / "templates",
+]
 STATICFILES_DIRS = [
     BASE_DIR / 'frontend' / 'build' / 'static',
     BASE_DIR / 'Bookmaker_app' / 'static',
