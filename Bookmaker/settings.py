@@ -192,7 +192,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
 handler404 = 'Bookmaker_app.views.custom_404'
-
-DATABASES = {
-    'default': dj_database_url.config()
-}
