@@ -40,4 +40,4 @@ urlpatterns = [
 
     path('obstaw/<int:event_id>/', views.obstaw_mecz, name='obstaw_mecz'),
     path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
