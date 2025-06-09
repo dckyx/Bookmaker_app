@@ -25,7 +25,7 @@ from .utils import przelicz_i_zapisz_kursy
 
 
 def home(request):
-    najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).exclude(status='zakonczony').order_by('datetime')[:5]
+    najblizsze_mecze = Event.objects.filter(datetime__gte=timezone.now()).exclude(status='zakonczony').order_by('datetime')[:5]
     return render(request, 'Bookmaker_app/home.html', {
         'najblizsze_mecze': najblizsze_mecze,
     })
