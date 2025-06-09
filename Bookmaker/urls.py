@@ -21,11 +21,11 @@ from django.urls import path, re_path
 from django.views.generic import TemplateView
 
 from Bookmaker_app import views
-from Bookmaker_app.views import get_dyscypliny, get_kategorie, RegisterView, ZakladyUzytkownikaView, spin_react
+from Bookmaker_app.views import get_dyscypliny, get_kategorie, RegisterView, ZakladyUzytkownikaView, spin_react, home
 
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
