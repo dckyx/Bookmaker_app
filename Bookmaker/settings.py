@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',  # will be inserted after SecurityMiddleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -165,10 +165,7 @@ TEMPLATES[0]['DIRS'] = [
     BASE_DIR / "Bookmaker_app" / "templates",
     BASE_DIR / "frontend" / "build"
 ]
-STATICFILES_DIRS = [
-    BASE_DIR / 'frontend' / 'build' / 'static',
-    BASE_DIR / 'Bookmaker_app' / 'static',
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'Bookmaker_app/static')]
 
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'frontend' / 'build' / 'static',
@@ -199,5 +196,6 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
 handler404 = 'Bookmaker_app.views.custom_404'
