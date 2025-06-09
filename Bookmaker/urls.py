@@ -24,21 +24,20 @@ from Bookmaker_app import views
 from Bookmaker_app.views import get_dyscypliny, get_kategorie, RegisterView, ZakladyUzytkownikaView, spin_react, home
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('admin/', admin.site.urls),
-    path('logout/', views.logout_view, name='logout'),
-    path('register/', views.register, name='register'),
-    path('login/', views.login_view, name='login'),
-    path('user_panel/', views.user_panel, name='user_panel'),
-    path('wplata/', views.wplata, name='wplata'),
-    path('wyplata/', views.wyplata, name='wyplata'),
-    path('spin/', TemplateView.as_view(template_name='bookmaker_app/spin_react.html'), name='spin'),
-    path('api/dyscypliny/', get_dyscypliny),
-    path('api/kategorie/', get_kategorie),
-    path('api/register/', views.register, name='register'),
-    path('api/zaklady/', ZakladyUzytkownikaView.as_view(), name='zaklady-uzytkownika'),
-
-    path('obstaw/<int:event_id>/', views.obstaw_mecz, name='obstaw_mecz'),
-    path('<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
+      path('', home, name='home'),
+      path('admin/', admin.site.urls),
+      path('logout/', views.logout_view, name='logout'),
+      path('register/', views.register, name='register'),
+      path('login/', views.login_view, name='login'),
+      path('user_panel/', views.user_panel, name='user_panel'),
+      path('wplata/', views.wplata, name='wplata'),
+      path('wyplata/', views.wyplata, name='wyplata'),
+      path('spin/', TemplateView.as_view(template_name='bookmaker_app/spin_react.html'), name='spin'),
+      path('api/dyscypliny/', get_dyscypliny),
+      path('api/kategorie/', get_kategorie),
+      path('api/register/', views.register, name='register'),
+      path('api/zaklady/', ZakladyUzytkownikaView.as_view(), name='zaklady-uzytkownika'),
+      path('obstaw/<int:event_id>/', views.obstaw_mecz, name='obstaw_mecz'),
+      path('dyscyplina/<str:nazwa>/', views.dyscyplina, name='dyscyplina'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
