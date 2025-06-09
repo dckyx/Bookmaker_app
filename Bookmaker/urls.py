@@ -32,7 +32,7 @@ urlpatterns = [
     path('user_panel/', views.user_panel, name='user_panel'),
     path('wplata/', views.wplata, name='wplata'),
     path('wyplata/', views.wyplata, name='wyplata'),
-    path('spin/', TemplateView.as_view(template_name='bookmaker_app/../Bookmaker_app/templates/spin_react.html'), name='spin'),
+    path('spin/', TemplateView.as_view(template_name='bookmaker_app/spin_react.html'), name='spin'),
     path('api/dyscypliny/', get_dyscypliny),
     path('api/kategorie/', get_kategorie),
     path('api/register/', views.register, name='register'),

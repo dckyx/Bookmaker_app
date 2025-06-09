@@ -26,7 +26,7 @@ from .utils import przelicz_i_zapisz_kursy
 
 def home(request):
     najblizsze_mecze = Event.objects.filter(datetime__gte=date.today()).exclude(status='zakonczony').order_by('datetime')[:5]
-    return render(request, 'bookmaker_app/templates/home.html', {
+    return render(request, 'Bookmaker_app/home.html', {
         'najblizsze_mecze': najblizsze_mecze,
     })
 
@@ -38,7 +38,7 @@ def register(request):
             return redirect('user_panel')
     else:
         form = CustomUserCreationForm()
-    return render(request, 'bookmaker_app/templates/register_form.html', {'form': form})
+    return render(request, 'Bookmaker_app/register_form.html', {'form': form})
 
 
 def login_view(request):
@@ -59,7 +59,7 @@ def login_view(request):
     else:
         form = CustomLogin()
 
-    return render(request, 'bookmaker_app/templates/login.html', {
+    return render(request, 'Bookmaker_app/login.html', {
         'form': form,
         'next': next_url
     })
@@ -70,7 +70,7 @@ def user_panel(request):
     modal_message = request.session.pop('modal_message', None)
     for z in zaklady:
         z.potencjalna_wygrana = round(z.wartosc * z.kurs, 2)
-    return render(request, 'bookmaker_app/templates/user_panel.html', {
+    return render(request, 'Bookmaker_app/user_panel.html', {
         'zaklady': zaklady,
         'transakcje': transakcje,
         'saldo': request.user.saldo,
@@ -79,7 +79,7 @@ def user_panel(request):
 
 
 def dyscyplina(request, nazwa):
-    template_name = 'bookmaker_app/dyscyplina.html'
+    template_name = 'Bookmaker_app/dyscyplina.html'
 
     # Pobieramy dyscyplinę po nazwie
     dyscyplina_obj = get_object_or_404(Dyscyplina, name=nazwa)
@@ -121,7 +121,7 @@ def wplata(request):
 
         request.session['modal_message'] = f'Wpłacono {kwota} zł.'
         return redirect('user_panel')
-    return render(request, 'bookmaker_app/templates/wplata.html', {
+    return render(request, 'Bookmaker_app/wplata.html', {
         'form': form,
     })
 
@@ -146,11 +146,11 @@ def wyplata(request):
             return redirect('user_panel')
         else:
             request.session['modal_message'] = 'Nie masz wystarczająco środków.'
-    return render(request, 'bookmaker_app/templates/wyplata.html', {
+    return render(request, 'Bookmaker_app/wyplata.html', {
         'form': form,
     })
 def spin_react(request):
-    return render(request, 'bookmaker_app/templates/spin_react.html', {
+    return render(request, 'Bookmaker_app/spin_react.html', {
     })
 
 class FrontendAppView(TemplateView):
@@ -225,7 +225,7 @@ def obstaw_mecz(request, event_id):
                 return redirect('user_panel')
             else:
                 form.add_error(None, 'Nie masz wystarczającej ilości środków.')
-                return render(request, 'bookmaker_app/templates/obstaw.html', {
+                return render(request, 'Bookmaker_app/obstaw.html', {
                     'form': form,
                     'event': event,
                     'saldo_niewystarczajace': True
@@ -233,10 +233,10 @@ def obstaw_mecz(request, event_id):
     else:
         form = ZakladForm()
 
-    return render(request, 'bookmaker_app/templates/obstaw.html', {
+    return render(request, 'Bookmaker_app/obstaw.html', {
         'form': form,
         'event': event
     })
 
 def custom_404(request, exception=None):
-    return render(request, 'Bookmaker_app/templates/404.html', status=404)
+    return render(request, '404.html', status=404)
