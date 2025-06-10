@@ -1,7 +1,9 @@
-
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import CustomUser
+import logging
+logger = logging.getLogger(__name__)
+
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
@@ -17,6 +19,12 @@ from django import forms
 
 class KwotaForm(forms.Form):
     kwota = forms.DecimalField(label="Kwota (zł)", min_value=0.01, max_digits=10, decimal_places=2)
+
+    def clean_kwota(self):
+        kwota = self.cleaned_data['kwota']
+        if kwota > 100000:
+            logger.warning(f"Bardzo duża wpłata {kwota}")
+        return kwota
 
 class ZakladForm(forms.Form):
     wartosc = forms.DecimalField(

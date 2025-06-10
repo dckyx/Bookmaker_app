@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import dj_database_url
 from decouple import config
+import logging
 
 # pip install python-cośtam cośtam
 # pip install python-decoupler
@@ -94,6 +95,39 @@ WSGI_APPLICATION = 'Bookmaker.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'app.log'),
+            'formatter': 'standard',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'bookmaker': {  # <- dedykowany logger np. dla Twojej aplikacji
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    }
+}
 
 
 # Password validation

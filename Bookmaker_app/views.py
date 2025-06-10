@@ -1,6 +1,5 @@
 import os
 from datetime import date
-
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -18,10 +17,12 @@ from .forms import CustomUserCreationForm, CustomLogin, KwotaForm, ZakladForm
 from django.shortcuts import render, get_object_or_404
 from .models import Dyscyplina, Event
 from .serializers import *
-
-
 from .models import *
 from .utils import przelicz_i_zapisz_kursy
+import logging
+
+logger = logging.getLogger('bookmaker')
+
 
 
 def home(request):
@@ -35,6 +36,7 @@ def register(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info(f"Zarejestrowano nowego użytkownika: {form.cleaned_data.get('username')}")
             return redirect('user_panel')
     else:
         form = CustomUserCreationForm()
@@ -50,12 +52,14 @@ def login_view(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
+            logger.info(f"Użytkownik {username} zalogował się.")
 
             if user is not None:
                 login(request, user)
                 return redirect(next_url)
             else:
                 form.add_error(None, "Niepoprawna nazwa użytkownika lub hasło")
+                logger.warning(f"Nieudane logowanie dla użytkownika: {username}")
     else:
         form = CustomLogin()
 
@@ -109,6 +113,7 @@ def wplata(request):
         kwota = form.cleaned_data['kwota']
         request.user.saldo += kwota
         request.user.save()
+        logger.info(f"Użytkownik {request.user.username} wpłacił {kwota} zł.")
 
         # Dodaj do historii
         HistoriaTransakcji.objects.create(
@@ -133,6 +138,8 @@ def wyplata(request):
         if request.user.saldo >= kwota:
             request.user.saldo -= kwota
             request.user.save()
+            logger.info(f"Użytkownik {request.user.username} wypłacił {kwota} zł.")
+
 
             # Dodaj do historii
             HistoriaTransakcji.objects.create(
@@ -146,6 +153,9 @@ def wyplata(request):
             return redirect('user_panel')
         else:
             request.session['modal_message'] = 'Nie masz wystarczająco środków.'
+            logger.warning(
+                f"Użytkownik {request.user.username} próbował wypłacić {kwota} zł, ale nie miał wystarczających środków.")
+
     return render(request, 'Bookmaker_app/wyplata.html', {
         'form': form,
     })
@@ -221,6 +231,8 @@ def obstaw_mecz(request, event_id):
                 )
 
                 request.session['modal_message'] = 'Zakład został obstawiony.'
+                logger.info(
+                    f"Użytkownik {request.user.username} obstawił mecz {event.name} na drużynę {wytypowany.name}, kwota: {wartosc} zł, kurs: {kurs}.")
                 przelicz_i_zapisz_kursy(event)
                 return redirect('user_panel')
             else:

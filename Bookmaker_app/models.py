@@ -4,6 +4,14 @@ from django.contrib.auth.models import User
 from decimal import Decimal
 from datetime import timedelta
 from django.utils import timezone
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+handler = logging.FileHandler('zaklady.log')
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+if not logger.hasHandlers():
+    logger.addHandler(handler)
 
 # Create your models here.
 
@@ -180,8 +188,10 @@ class ZakladyUzytkownika(models.Model):
             self.user.saldo += wygrana
             self.user.save()
             self.wynik = 'wygrany'
+            logger.info(f"Zakład {self.id} WYGRANY – użytkownik {self.user.username}, wygrana: {wygrana} zł")
         else:
             self.wynik = 'przegrany'
+            logger.info(f"Zakład {self.id} PRZEGRANY – użytkownik {self.user.username}")
 
         self.save()
     def __str__(self):
