@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-AUTH_USER_MODEL = 'bookmaker_app.CustomUser'
+AUTH_USER_MODEL = 'Bookmaker_app.CustomUser'
 
 # Application definition
 
