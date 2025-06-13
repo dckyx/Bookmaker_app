@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=250)),
-                ('dyscyplina', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.dyscyplina')),
+                ('dyscyplina', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.dyscyplina')),
             ],
         ),
         migrations.CreateModel(
@@ -52,15 +52,15 @@ class Migration(migrations.Migration):
                 ('status', models.CharField(max_length=50)),
                 ('wynik_druzyna1', models.CharField(max_length=50)),
                 ('wynik_druzyna2', models.CharField(max_length=50)),
-                ('druzyna1', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='druzyna1', to='Bookmaker_app.drużyna')),
-                ('druzyna2', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='druzyna2', to='Bookmaker_app.drużyna')),
-                ('dyscyplina', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.dyscyplina')),
+                ('druzyna1', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='druzyna1', to='bookmaker_app.drużyna')),
+                ('druzyna2', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='druzyna2', to='bookmaker_app.drużyna')),
+                ('dyscyplina', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.dyscyplina')),
             ],
         ),
         migrations.AddField(
             model_name='dyscyplina',
             name='kategoria',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.kategoria'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.kategoria'),
         ),
         migrations.CreateModel(
             name='Stream',
@@ -68,7 +68,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('platforma', models.CharField(max_length=50)),
                 ('url', models.URLField()),
-                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.event')),
+                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.event')),
             ],
         ),
         migrations.CreateModel(
@@ -78,8 +78,8 @@ class Migration(migrations.Migration):
                 ('nazwa', models.CharField(max_length=100)),
                 ('szanse', models.DecimalField(decimal_places=2, max_digits=3)),
                 ('czy_zwyciezca', models.BooleanField(default=False)),
-                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.event')),
-                ('typ', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.typzakladu')),
+                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.event')),
+                ('typ', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.typzakladu')),
             ],
         ),
         migrations.CreateModel(

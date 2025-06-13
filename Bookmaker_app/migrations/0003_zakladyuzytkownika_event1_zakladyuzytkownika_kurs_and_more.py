@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='zakladyuzytkownika',
             name='event1',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.event'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.event'),
             preserve_default=False,
         ),
         migrations.AddField(
