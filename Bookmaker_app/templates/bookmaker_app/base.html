@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Bookmaker</title>
-    <link rel="stylesheet" href="{% static 'Bookmaker_app/css/newMenu.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'Bookmaker_app/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'bookmaker_app/css/newMenu.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'bookmaker_app/images/favicon.png' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
@@ -263,12 +263,12 @@
         <div id="logo_nav_container">
                 <button id="burger-btn" class="link_but_button">☰</button>
                   <a href="{% url 'home' %}">
-                    <img src="{% static 'Bookmaker_app/images/logo_header.jpg' %}" alt="logo_header_bookmaker" class="logo" style="border-radius: 30px">
+                    <img src="{% static 'bookmaker_app/images/logo_header.jpg' %}" alt="logo_header_bookmaker" class="logo" style="border-radius: 30px">
                   </a>
                   <a href="{% url 'home' %}" class="link_but_button">Zakłady</a>
                   <a href="{% url 'home' %}" class="link_but_button">Na Żywo</a>
                   <a href="{% url 'spin' %}" class="link_but_button">
-                    <img id="karol-img" src="{% static 'Bookmaker_app/images/karol.jpeg' %}" alt="spin" class="logo" style="width: 70px; border-radius: 50px">
+                    <img id="karol-img" src="{% static 'bookmaker_app/images/karol.jpeg' %}" alt="spin" class="logo" style="width: 70px; border-radius: 50px">
                   </a>
             </div>
         </div>
@@ -415,15 +415,15 @@
       }
       const logoImg = document.querySelector('img[alt="logo_header_bookmaker"]');
       if (logoImg) {
-        const darkLogo = "/static/bookmaker_app/images/logo_header_dark.jpg";
-        const lightLogo = "/static/bookmaker_app/images/logo_header.jpg";
+        const darkLogo = "bookmaker_app/images/logo_header_dark.jpg";
+        const lightLogo = "bookmaker_app/images/logo_header.jpg";
         logoImg.src = themeName === "dark" ? darkLogo : lightLogo;
       }
       // Obsługa drugiego zdjęcia Karola
       const karolImg = document.getElementById("karol-img");
       if (karolImg) {
-        const darkKarol = "/static/bookmaker_app/images/karol_dark.jpeg";
-        const lightKarol = "/static/bookmaker_app/images/karol.jpeg";
+        const darkKarol = "bookmaker_app/images/images/karol_dark.jpeg";
+        const lightKarol = "bookmaker_app/images/images/karol.jpeg";
         karolImg.src = themeName === "dark" ? darkKarol : lightKarol;
       }
     }

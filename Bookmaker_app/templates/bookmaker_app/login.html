@@ -77,7 +77,7 @@
     <div class="card shadow p-4 themed-panel" style="width: 100%; max-width: 400px;">
       <div class="text-center mb-3">
         <a href="{% url 'home' %}">
-          <img id="logzro-img" src="{% static 'Bookmaker_app/images/logo_header.jpg' %}" alt="Logo" style="max-height: 60px; border-radius: 12px;">
+          <img id="logzro-img" src="{% static 'bookmaker_app/images/logo_header.jpg' %}" alt="Logo" style="max-height: 60px; border-radius: 12px;">
         </a>
       </div>
       <h2 class="mb-4 text-center">Logowanie</h2>
@@ -133,8 +133,8 @@
       document.getElementById("theme-icon").className = themeName === "dark" ? "bi bi-sun-fill" : "bi bi-moon-fill";
       const logoImg = document.getElementById("logo-img");
       if (logoImg) {
-        const darkLogo = "/static/bookmaker_app/images/logo_header_dark.jpg";
-        const lightLogo = "/static/bookmaker_app/images/logo_header.jpg";
+        const darkLogo = "bookmaker_app/images/logo_header_dark.jpg";
+        const lightLogo = "bookmaker_app/images/logo_header.jpg";
         logoImg.src = themeName === "dark" ? darkLogo : lightLogo;
       }
     }
