@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "widget_tweaks",
     'grappelli',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

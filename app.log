@@ -1,0 +1,112 @@
+[2025-06-10 19:57:15,523] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-10 19:57:24,064] [INFO] [django.server] "GET / HTTP/1.1" 200 56229
+[2025-06-10 19:57:24,116] [INFO] [django.server] "GET /static/Bookmaker_app/css/newMenu.css HTTP/1.1" 200 0
+[2025-06-10 20:26:17,200] [INFO] [django.server] "GET /obstaw/689/ HTTP/1.1" 200 49508
+[2025-06-10 20:26:22,986] [INFO] [django.server] "GET / HTTP/1.1" 200 56229
+[2025-06-10 20:26:32,188] [INFO] [django.server] "GET /dyscyplina/Taekwondo/ HTTP/1.1" 200 75028
+[2025-06-10 20:26:41,468] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 72197
+[2025-06-10 20:26:45,750] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 48366
+[2025-06-10 20:26:49,675] [INFO] [bookmaker] Użytkownik jamalbe wpłacił 2137 zł.
+[2025-06-10 20:26:49,859] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 302 0
+[2025-06-10 20:26:53,092] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 72770
+[2025-06-10 20:26:59,827] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:27:19,404] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:27:28,740] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 72770
+[2025-06-10 20:27:33,234] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:27:38,473] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:27:44,907] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:27:50,420] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:27:56,926] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48369
+[2025-06-10 20:28:02,853] [INFO] [bookmaker] Użytkownik jamalbe wpłacił 100000 zł.
+[2025-06-10 20:28:03,029] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 302 0
+[2025-06-10 20:28:06,242] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 73345
+[2025-06-10 20:28:10,987] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 48371
+[2025-06-10 20:28:19,903] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48371
+[2025-06-10 20:28:29,095] [INFO] [bookmaker] Użytkownik jamalbe wpłacił 10000000 zł.
+[2025-06-10 20:28:29,267] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 302 0
+[2025-06-10 20:28:32,448] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 73924
+[2025-06-10 20:28:37,842] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 48373
+[2025-06-10 20:28:44,495] [INFO] [bookmaker] Użytkownik jamalbe wpłacił 1000000 zł.
+[2025-06-10 20:28:44,678] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 302 0
+[2025-06-10 20:28:47,888] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 74497
+[2025-06-10 20:28:55,240] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 48373
+[2025-06-10 20:29:03,515] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48373
+[2025-06-10 20:29:13,073] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48373
+[2025-06-10 20:29:24,292] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 200 48373
+[2025-06-10 20:29:30,599] [INFO] [bookmaker] Użytkownik jamalbe wpłacił 10000000 zł.
+[2025-06-10 20:29:30,776] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 302 0
+[2025-06-10 20:29:33,966] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 75072
+[2025-06-10 20:29:43,147] [INFO] [django.server] "GET /wyplata/ HTTP/1.1" 200 48374
+[2025-06-10 20:30:02,181] [INFO] [django.server] "GET / HTTP/1.1" 200 56236
+[2025-06-10 20:30:59,011] [INFO] [django.server] "GET /obstaw/689/ HTTP/1.1" 200 49515
+[2025-06-10 20:31:12,051] [INFO] [bookmaker] Użytkownik jamalbe obstawił mecz Runda nr 60 na drużynę Reprezentacja Wielkiej Brytanii w bobslejach, kwota: 21002137 zł, kurs: 2.35.
+[2025-06-10 20:31:12,412] [INFO] [django.server] "POST /obstaw/689/ HTTP/1.1" 302 0
+[2025-06-10 20:31:15,839] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 77226
+[2025-06-11 12:51:33,715] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-11 12:52:12,454] [INFO] [django.server] "GET / HTTP/1.1" 200 57181
+[2025-06-11 12:52:12,498] [INFO] [django.server] "GET /static/Bookmaker_app/css/newMenu.css HTTP/1.1" 200 0
+[2025-06-11 12:52:12,501] [INFO] [django.server] "GET /static/Bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-11 12:52:12,826] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 58821)
+[2025-06-11 12:52:12,827] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 58854)
+[2025-06-11 12:52:13,005] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 58823)
+[2025-06-11 12:52:15,064] [INFO] [django.server] "GET / HTTP/1.1" 200 57181
+[2025-06-11 12:52:15,065] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 58839)
+[2025-06-11 12:52:38,553] [INFO] [django.server] "GET / HTTP/1.1" 200 57181
+[2025-06-11 12:52:38,599] [INFO] [django.server] "GET /static/Bookmaker_app/css/newMenu.css HTTP/1.1" 200 0
+[2025-06-11 12:52:38,603] [INFO] [django.server] "GET /static/Bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-11 12:52:56,009] [INFO] [django.server] "GET /admin HTTP/1.1" 301 0
+[2025-06-11 12:52:56,477] [INFO] [django.server] "GET /admin/ HTTP/1.1" 302 0
+[2025-06-11 12:52:57,016] [INFO] [django.server] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3689
+[2025-06-11 12:52:57,029] [INFO] [django.server] "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[2025-06-11 12:52:57,032] [INFO] [django.server] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[2025-06-11 12:52:57,034] [INFO] [django.server] "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[2025-06-11 12:52:57,035] [INFO] [django.server] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[2025-06-11 12:52:57,035] [INFO] [django.server] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[2025-06-11 12:52:57,035] [INFO] [django.server] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[2025-06-11 12:52:57,035] [INFO] [django.server] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2025-06-11 12:52:57,073] [WARNING] [django.request] Not Found: /favicon.ico
+[2025-06-11 12:52:57,074] [WARNING] [django.server] "GET /favicon.ico HTTP/1.1" 404 4922
+[2025-06-11 12:53:10,279] [INFO] [django.server] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2025-06-11 12:53:10,705] [INFO] [django.server] "GET /admin/ HTTP/1.1" 200 15565
+[2025-06-11 12:53:10,729] [INFO] [django.server] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[2025-06-11 12:53:10,743] [INFO] [django.server] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2025-06-11 12:53:10,743] [INFO] [django.server] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2025-06-11 12:53:22,288] [INFO] [django.server] "GET /admin/Bookmaker_app/customuser/ HTTP/1.1" 200 110721
+[2025-06-11 12:53:22,301] [INFO] [django.server] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+[2025-06-11 12:53:22,310] [INFO] [django.server] "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[2025-06-11 12:53:22,311] [INFO] [django.server] "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[2025-06-11 12:53:22,313] [INFO] [django.server] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2025-06-11 12:53:22,315] [INFO] [django.server] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2025-06-11 12:53:22,316] [INFO] [django.server] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[2025-06-11 12:53:22,317] [INFO] [django.server] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2025-06-11 12:53:22,318] [INFO] [django.server] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[2025-06-11 12:53:22,320] [INFO] [django.server] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[2025-06-11 12:53:22,320] [INFO] [django.server] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[2025-06-11 12:53:22,322] [INFO] [django.server] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[2025-06-11 12:53:22,323] [INFO] [django.server] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[2025-06-11 12:53:22,325] [INFO] [django.server] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2025-06-11 12:53:22,668] [INFO] [django.server] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-11 12:53:22,720] [INFO] [django.server] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2025-06-11 12:53:22,720] [INFO] [django.server] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[2025-06-11 12:53:22,721] [INFO] [django.server] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[2025-06-11 12:53:44,360] [INFO] [django.server] "GET /admin/Bookmaker_app/dru%C5%BCyna/ HTTP/1.1" 200 56936
+[2025-06-11 12:53:44,803] [INFO] [django.server] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-11 12:54:03,187] [INFO] [django.server] "GET /admin/Bookmaker_app/customuser/ HTTP/1.1" 200 110721
+[2025-06-11 12:54:03,776] [INFO] [django.server] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-11 12:56:02,830] [INFO] [django.server] "GET / HTTP/1.1" 200 44305
+[2025-06-11 12:56:10,208] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 44746
+[2025-06-11 12:56:13,970] [INFO] [django.server] "GET /wplata/ HTTP/1.1" 200 36453
+[2025-06-11 12:56:17,059] [INFO] [bookmaker] Użytkownik MichalAdmin wpłacił 120 zł.
+[2025-06-11 12:56:17,231] [INFO] [django.server] "POST /wplata/ HTTP/1.1" 302 0
+[2025-06-11 12:56:18,044] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 45311
+[2025-06-11 12:56:45,667] [INFO] [django.server] "GET / HTTP/1.1" 200 44305
+[2025-06-11 12:56:51,091] [INFO] [django.server] "GET /obstaw/1184/ HTTP/1.1" 200 37598
+[2025-06-11 12:57:06,902] [INFO] [bookmaker] Użytkownik MichalAdmin obstawił mecz Mecz nr 55 na drużynę Reprezentacja Wielkiej Brytanii w skoku w dal, kwota: 720 zł, kurs: 4.18.
+[2025-06-11 12:57:07,192] [INFO] [django.server] "POST /obstaw/1184/ HTTP/1.1" 302 0
+[2025-06-11 12:57:08,126] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 47450
+[2025-06-11 12:57:28,463] [INFO] [django.server] "GET / HTTP/1.1" 200 45256
+[2025-06-11 12:58:59,159] [INFO] [django.server] "GET /obstaw/684/ HTTP/1.1" 200 38549
+[2025-06-11 12:59:28,189] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 58913)
+[2025-06-11 14:20:26,215] [INFO] [django.server] "GET / HTTP/1.1" 200 45184
+[2025-06-11 14:20:29,003] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 47450
+[2025-06-11 14:20:36,248] [INFO] [django.server] "GET / HTTP/1.1" 200 45184
