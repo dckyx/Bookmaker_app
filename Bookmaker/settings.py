@@ -200,7 +200,7 @@ TEMPLATES[0]['DIRS'] = [
     BASE_DIR / "bookmaker_app" / "templates",
     BASE_DIR / "frontend" / "build"
 ]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'Bookmaker_app/static')]
+STATICFILES_DIRS = [ BASE_DIR / "bookmaker-project" / "Bookmaker_app" / "static" ]
 
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'frontend' / 'build' / 'static',
