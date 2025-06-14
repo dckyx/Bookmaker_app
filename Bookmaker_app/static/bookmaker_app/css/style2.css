@@ -1,0 +1,109 @@
+/* Tło strony z obrazem */
+body {
+    background-image: url("../images/logo.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Uniwersalna karta */
+.custom-card {
+    background-color: rgba(64, 58, 61, 0.85);
+    border-radius: 15px;
+    border: 2px solid #333;
+    color: #F2F2EB;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+/* Nagłówki */
+h1, h2 {
+    color: #F2F2EB;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Przyciski */
+.btn-custom, #nieregularna_nazwa {
+    background-color: #E14B4B;
+    color: #F2F2EB;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover, #nieregularna_nazwa:hover {
+    background-color: darkred;
+}
+
+/* Pola formularza */
+input.form-control, select.form-control, textarea.form-control {
+    background-color: #F2F2EB;
+    border: 1px solid #E14B4B;
+    color: #000;
+}
+
+input.form-control:focus {
+    border-color: #b30000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Lista wydarzeń */
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #555;
+    color: #F2F2EB;
+    border-radius: 5px;
+}
+
+/* Linki */
+a {
+    color: #E14B4B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+.btn-custom-outline {
+    background-color: #E14B4B;
+    color: #F2F2EB;
+    border: 2px solid #F2F2EB;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-custom-outline:hover {
+    background-color: darkred;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #E14B4B !important;
+}

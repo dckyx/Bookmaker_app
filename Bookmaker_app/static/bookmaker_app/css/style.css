@@ -1,0 +1,74 @@
+/*body{*/
+/*    background-color: #E14B4B;}
+      background-color: #F2F2EB;}*/
+
+/* Ustawienie tła strony */
+body {
+    background-image: url("../images/logo.jpeg");  /* Ścieżka względem folderu CSS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Comic Sans MS", "Comic Sans MS";
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Styl nagłówka */
+h2 {
+    color: #F2F2EB;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Styl dla całej kartki logowania */
+.custom-card {
+    background-color: rgba(0, 0, 0, 0.8); /* Ciemne półprzezroczyste tło */
+    border-radius: 15px;
+    border: 2px solid #333;
+    color:  #F2F2EB;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styl przycisku Zaloguj się */
+#nieregularna_nazwa {
+    background-color: #E14B4B;
+    color:  #F2F2EB;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#nieregularna_nazwa:hover {
+    background-color: darkred;
+}
+
+/* Styl pól formularza */
+input.form-control {
+    border-color: #E14B4B;
+    background-color: #F2F2EB;
+}
+
+input.form-control:focus {
+    border-color: #b30000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.button-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0px; /* Możesz zmienić w zależności od potrzeb */
+}
+.scroll-panel {
+    width: 25px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
