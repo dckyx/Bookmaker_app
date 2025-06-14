@@ -197,15 +197,15 @@ DATABASES = {
 
 #
 TEMPLATES[0]['DIRS'] = [
-    BASE_DIR / "bookmaker_app" / "templates",
+    BASE_DIR / "Bookmaker_app" / "templates",
     BASE_DIR / "frontend" / "build"
 ]
-STATICFILES_DIRS = [ BASE_DIR / "bookmaker_app" / "static" ]
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'frontend' / 'build' / 'static',
-#     BASE_DIR / 'bookmaker_app' / 'static',
-#
-# ]
+# STATICFILES_DIRS = [BASE_DIR / "Bookmaker_app" / "static"]
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend' / 'build' / 'static',
+    BASE_DIR / 'Bookmaker_app' / 'static',
+
+]
 # # CSRF and session cookie settings for development
 # CSRF_COOKIE_HTTPONLY = False
 # CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000']
@@ -232,4 +232,4 @@ CSRF_TRUSTED_ORIGINS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
-handler404 = 'bookmaker_app.views.custom_404'
+handler404 = 'Bookmaker_app.views.custom_404'

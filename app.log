@@ -110,3 +110,187 @@
 [2025-06-11 14:20:26,215] [INFO] [django.server] "GET / HTTP/1.1" 200 45184
 [2025-06-11 14:20:29,003] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 47450
 [2025-06-11 14:20:36,248] [INFO] [django.server] "GET / HTTP/1.1" 200 45184
+[2025-06-14 20:07:19,624] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:08:01,202] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-14 20:08:01,509] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:08:05,031] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:08:22,907] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:08:56,383] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-14 20:08:57,597] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:10:09,154] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:10:20,661] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/urls.py changed, reloading.
+[2025-06-14 20:10:20,951] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:10:26,206] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/bookmaker_app/utils.py changed, reloading.
+[2025-06-14 20:10:26,419] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:11:19,961] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:12:03,184] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/urls.py changed, reloading.
+[2025-06-14 20:12:03,658] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:12:26,059] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-14 20:12:26,369] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:12:28,262] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:12:32,140] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:12:32,177] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:12:32,189] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 200 42436
+[2025-06-14 20:12:32,190] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-14 20:12:32,375] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:12:32,378] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:12:32,378] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:12:32,378] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:12:32,469] [WARNING] [django.request] Not Found: /apple-touch-icon-precomposed.png
+[2025-06-14 20:12:32,470] [WARNING] [django.server] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 4985
+[2025-06-14 20:12:32,473] [WARNING] [django.request] Not Found: /apple-touch-icon.png
+[2025-06-14 20:12:32,474] [WARNING] [django.server] "GET /apple-touch-icon.png HTTP/1.1" 404 4949
+[2025-06-14 20:12:32,476] [INFO] [django.server] "GET /static/bookmaker_app/images/favicon.png HTTP/1.1" 200 1131060
+[2025-06-14 20:13:10,251] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:13:13,495] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:13:13,513] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:13:13,528] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:13:13,530] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:13:13,530] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:13:13,530] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:13:40,250] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:13:43,266] [INFO] [django.server] "GET / HTTP/1.1" 200 45101
+[2025-06-14 20:13:43,288] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:13:43,291] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 304 0
+[2025-06-14 20:13:43,293] [WARNING] [django.server] "GET /static/static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 2056
+[2025-06-14 20:13:43,296] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:13:43,296] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:13:43,300] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:13:43,300] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:13:44,507] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header.jpg
+[2025-06-14 20:13:44,509] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol.jpeg
+[2025-06-14 20:13:44,509] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol.jpeg HTTP/1.1" 404 5003
+[2025-06-14 20:13:44,509] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 4997
+[2025-06-14 20:13:45,518] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:13:45,520] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:13:45,520] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:13:45,521] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:14:13,879] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:14:16,714] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:14:16,743] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:14:16,745] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 304 0
+[2025-06-14 20:14:16,750] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:14:16,751] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:14:16,754] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:14:16,754] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:14:18,312] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header.jpg
+[2025-06-14 20:14:18,314] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol.jpeg
+[2025-06-14 20:14:18,314] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 4997
+[2025-06-14 20:14:18,315] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol.jpeg HTTP/1.1" 404 5003
+[2025-06-14 20:14:19,089] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:14:19,091] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:14:19,092] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:14:19,092] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:14:19,377] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header.jpg
+[2025-06-14 20:14:19,379] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol.jpeg
+[2025-06-14 20:14:19,379] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol.jpeg HTTP/1.1" 404 5003
+[2025-06-14 20:14:19,379] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 4997
+[2025-06-14 20:14:19,826] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:14:19,827] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:14:19,829] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:14:19,829] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:14:20,216] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header.jpg
+[2025-06-14 20:14:20,218] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol.jpeg
+[2025-06-14 20:14:20,219] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 4997
+[2025-06-14 20:14:20,219] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol.jpeg HTTP/1.1" 404 5003
+[2025-06-14 20:14:22,672] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:14:22,687] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:14:22,698] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header.jpg
+[2025-06-14 20:14:22,701] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol.jpeg
+[2025-06-14 20:14:22,701] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 4997
+[2025-06-14 20:14:22,701] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol.jpeg HTTP/1.1" 404 5003
+[2025-06-14 20:17:23,997] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:17:27,709] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:17:27,727] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:17:27,738] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 304 0
+[2025-06-14 20:17:27,738] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 304 0
+[2025-06-14 20:17:27,747] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol.jpeg
+[2025-06-14 20:17:27,749] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header.jpg
+[2025-06-14 20:17:27,750] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header.jpg HTTP/1.1" 404 4997
+[2025-06-14 20:17:27,750] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol.jpeg HTTP/1.1" 404 5003
+[2025-06-14 20:17:29,167] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:17:29,169] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:17:29,170] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:17:29,170] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:17:31,745] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:17:31,764] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:17:31,780] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:17:31,781] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 20:17:31,783] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:17:31,783] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:17:45,687] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 20:17:49,196] [INFO] [django.server] "GET / HTTP/1.1" 200 45094
+[2025-06-14 20:17:49,213] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 20:17:49,227] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 20:17:49,229] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 20:17:49,230] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 20:17:49,230] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:08:29,379] [INFO] [django.server] "GET / HTTP/1.1" 200 45138
+[2025-06-14 21:08:29,408] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:08:29,428] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 200 42436
+[2025-06-14 21:08:29,428] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-14 21:08:29,433] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:08:29,435] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:08:29,436] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:08:29,436] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 21:09:48,689] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-14 21:09:49,093] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 21:09:53,385] [INFO] [django.server] "GET / HTTP/1.1" 200 45138
+[2025-06-14 21:09:53,401] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:09:53,413] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:09:53,416] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:09:53,417] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:09:53,417] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 21:09:57,802] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 298
+[2025-06-14 21:09:57,827] [WARNING] [django.server] "GET /static/bookmaker_app/js/spin_bundle.js HTTP/1.1" 404 2020
+[2025-06-14 21:09:57,828] [WARNING] [django.server] "GET /static/bookmaker_app/css/spin.css HTTP/1.1" 404 2005
+[2025-06-14 21:10:02,488] [INFO] [django.server] "GET / HTTP/1.1" 200 45138
+[2025-06-14 21:10:02,499] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:10:02,514] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:10:02,517] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:10:02,517] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:10:02,517] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 21:10:05,372] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 47432
+[2025-06-14 21:10:05,390] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:10:05,402] [WARNING] [django.request] Not Found: /user_panel/bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:10:05,405] [WARNING] [django.request] Not Found: /user_panel/Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:10:05,405] [WARNING] [django.server] "GET /user_panel/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5045
+[2025-06-14 21:10:05,405] [WARNING] [django.server] "GET /user_panel/Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5051
+[2025-06-14 21:10:58,038] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-14 21:10:58,397] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 21:11:01,725] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 47432
+[2025-06-14 21:11:01,737] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:11:01,771] [WARNING] [django.request] Not Found: /user_panel/bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:11:01,773] [WARNING] [django.request] Not Found: /user_panel/Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:11:01,774] [WARNING] [django.server] "GET /user_panel/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5045
+[2025-06-14 21:11:01,774] [WARNING] [django.server] "GET /user_panel/Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5051
+[2025-06-14 21:11:04,785] [INFO] [django.server] "GET / HTTP/1.1" 200 45138
+[2025-06-14 21:11:04,795] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:11:04,809] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:11:04,809] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:11:04,813] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:11:04,813] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 21:11:17,107] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-14 21:11:17,486] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 21:11:22,042] [INFO] [django.server] "GET / HTTP/1.1" 200 45138
+[2025-06-14 21:11:22,069] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:11:22,163] [WARNING] [django.request] Not Found: /bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:11:22,165] [WARNING] [django.request] Not Found: /Bookmaker_app/images/images/karol_dark.jpeg
+[2025-06-14 21:11:22,165] [WARNING] [django.server] "GET /bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:11:22,165] [WARNING] [django.server] "GET /Bookmaker_app/images/images/karol_dark.jpeg HTTP/1.1" 404 5018
+[2025-06-14 21:12:24,059] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 21:12:26,812] [INFO] [django.server] "GET / HTTP/1.1" 200 45156
+[2025-06-14 21:12:26,829] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:12:26,851] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 200 25743
+[2025-06-14 21:12:26,851] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 200 328654
+[2025-06-14 21:13:08,244] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-14 21:13:09,233] [INFO] [django.server] "GET / HTTP/1.1" 200 43604
+[2025-06-14 21:13:09,255] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-14 21:13:12,338] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4980
+[2025-06-14 21:13:49,836] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 21:13:51,061] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-14 21:13:54,669] [INFO] [django.server] "GET /api/register/ HTTP/1.1" 200 5551
+[2025-06-14 21:13:54,695] [WARNING] [django.request] Not Found: /Bookmaker_app/images/logo_header_dark.jpg
+[2025-06-14 21:13:54,695] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
+[2025-06-14 21:14:11,089] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-14 21:14:12,828] [INFO] [django.server] "GET /api/register/ HTTP/1.1" 200 5565

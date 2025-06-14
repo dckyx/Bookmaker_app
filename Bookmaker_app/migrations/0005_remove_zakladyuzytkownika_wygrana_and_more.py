@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='zakladyuzytkownika',
             name='wytypowany',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookmaker_app.drużyna'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Bookmaker_app.drużyna'),
         ),
     ]
