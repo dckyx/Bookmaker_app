@@ -294,3 +294,10 @@
 [2025-06-14 21:13:54,695] [WARNING] [django.server] "GET /Bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 404 5012
 [2025-06-14 21:14:11,089] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
 [2025-06-14 21:14:12,828] [INFO] [django.server] "GET /api/register/ HTTP/1.1" 200 5565
+[2025-06-15 10:19:20,874] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 10:19:37,665] [INFO] [django.server] "GET / HTTP/1.1" 200 43623
+[2025-06-15 10:19:37,713] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 304 0
+[2025-06-15 10:19:37,713] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 10:19:37,713] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 304 0
+[2025-06-15 10:19:40,359] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 304 0
+[2025-06-15 10:19:40,361] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 304 0
