@@ -83,7 +83,7 @@ def user_panel(request):
 
 
 def dyscyplina(request, nazwa):
-    template_name = 'Bookmaker_app/dyscyplina.html'
+    template_name = 'bookmaker_app/dyscyplina.html'
 
     # Pobieramy dyscyplinę po nazwie
     dyscyplina_obj = get_object_or_404(Dyscyplina, name=nazwa)
