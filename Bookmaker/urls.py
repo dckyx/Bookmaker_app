@@ -21,7 +21,8 @@ from django.urls import path, re_path
 from django.views.generic import TemplateView
 
 from Bookmaker_app import views
-from Bookmaker_app.views import get_dyscypliny, get_kategorie, RegisterView, ZakladyUzytkownikaView, spin_react, home
+from Bookmaker_app.views import get_dyscypliny, get_kategorie, RegisterView, ZakladyUzytkownikaView, spin_react, home, \
+      spin_api
 
 urlpatterns = [
       path('', home, name='home'),
@@ -32,6 +33,7 @@ urlpatterns = [
       path('user_panel/', views.user_panel, name='user_panel'),
       path('wplata/', views.wplata, name='wplata'),
       path('wyplata/', views.wyplata, name='wyplata'),
+      path('api/spin/', spin_api, name='spin_api'),
       path('spin/', TemplateView.as_view(template_name='bookmaker_app/spin_react.html'), name='spin'),
       path('api/dyscypliny/', get_dyscypliny),
       path('api/kategorie/', get_kategorie),

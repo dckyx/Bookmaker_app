@@ -301,3 +301,2074 @@
 [2025-06-15 10:19:37,713] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 304 0
 [2025-06-15 10:19:40,359] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 304 0
 [2025-06-15 10:19:40,361] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 304 0
+[2025-06-15 18:38:35,505] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:39:04,380] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:39:51,951] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:40:22,205] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:40:42,342] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:41:29,126] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-15 18:41:29,188] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 200 42436
+[2025-06-15 18:41:29,189] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-15 18:41:30,084] [WARNING] [django.request] Not Found: /static/bookmaker_app/css/newMenu.css
+[2025-06-15 18:41:30,084] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 34792
+[2025-06-15 18:41:30,104] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 200 25743
+[2025-06-15 18:41:30,107] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 200 328654
+[2025-06-15 18:41:31,919] [ERROR] [django.request] Internal Server Error: /spin/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 163, in spin_react
+    return render(request, 'bookmaker_app/spin_react.html', {
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'static'. Did you forget to register or load this tag?
+[2025-06-15 18:41:31,926] [ERROR] [django.server] "GET /spin/ HTTP/1.1" 500 145
+[2025-06-15 18:41:33,685] [ERROR] [django.request] Internal Server Error: /spin/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 163, in spin_react
+    return render(request, 'bookmaker_app/spin_react.html', {
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'static'. Did you forget to register or load this tag?
+[2025-06-15 18:41:33,692] [ERROR] [django.server] "GET /spin/ HTTP/1.1" 500 145
+[2025-06-15 18:42:27,413] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/urls.py changed, reloading.
+[2025-06-15 18:42:27,812] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:50:43,944] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:51:08,816] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/settings.py changed, reloading.
+[2025-06-15 18:51:09,198] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 18:52:39,588] [ERROR] [django.request] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 30, in home
+    return render(request, 'bookmaker_app/home.html', {
+        'najblizsze_mecze': najblizsze_mecze,
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'spin' not found. 'spin' is not a valid view function or pattern name.
+[2025-06-15 18:52:39,592] [ERROR] [django.request] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 30, in home
+    return render(request, 'bookmaker_app/home.html', {
+        'najblizsze_mecze': najblizsze_mecze,
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'spin' not found. 'spin' is not a valid view function or pattern name.
+[2025-06-15 18:52:39,600] [ERROR] [django.server] "GET / HTTP/1.1" 500 136193
+[2025-06-15 18:52:39,603] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 59648)
+[2025-06-15 18:52:43,614] [ERROR] [django.request] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 30, in home
+    return render(request, 'bookmaker_app/home.html', {
+        'najblizsze_mecze': najblizsze_mecze,
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'spin' not found. 'spin' is not a valid view function or pattern name.
+[2025-06-15 18:52:43,620] [ERROR] [django.server] "GET / HTTP/1.1" 500 136257
+[2025-06-15 18:52:43,620] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 59655)
+[2025-06-15 18:54:36,873] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:01:34,347] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:01:40,040] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-15 19:01:40,107] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 304 0
+[2025-06-15 19:01:40,107] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 304 0
+[2025-06-15 19:01:40,110] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:01:40,118] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 304 0
+[2025-06-15 19:01:40,118] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 304 0
+[2025-06-15 19:01:41,559] [ERROR] [django.request] Internal Server Error: /spin/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 163, in spin_react
+    return render(request, 'bookmaker_app/spin_react.html', {
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'static'. Did you forget to register or load this tag?
+[2025-06-15 19:01:41,565] [ERROR] [django.server] "GET /spin/ HTTP/1.1" 500 133830
+[2025-06-15 19:02:31,245] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/urls.py changed, reloading.
+[2025-06-15 19:02:31,633] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:02:35,998] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/urls.py changed, reloading.
+[2025-06-15 19:02:36,279] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:03:13,962] [ERROR] [django.request] Internal Server Error: /spin/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'static'. Did you forget to register or load this tag?
+[2025-06-15 19:03:13,974] [ERROR] [django.server] "GET /spin/ HTTP/1.1" 500 133321
+[2025-06-15 19:04:39,165] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:05:59,336] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 259
+[2025-06-15 19:05:59,360] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js HTTP/1.1" 200 2026
+[2025-06-15 19:06:01,682] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 259
+[2025-06-15 19:06:58,733] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js.map HTTP/1.1" 200 5664
+[2025-06-15 19:07:34,158] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 259
+[2025-06-15 19:08:03,190] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 60020)
+[2025-06-15 19:35:18,980] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:35:29,718] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 259
+[2025-06-15 19:35:29,737] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js HTTP/1.1" 304 0
+[2025-06-15 19:35:29,805] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js.map HTTP/1.1" 304 0
+[2025-06-15 19:38:04,087] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:38:06,403] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 348
+[2025-06-15 19:38:06,452] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 19:38:06,466] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 19:38:06,513] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js.map HTTP/1.1" 200 7996
+[2025-06-15 19:38:06,519] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:38:06,520] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:38:06,522] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js.map HTTP/1.1" 200 783565
+[2025-06-15 19:38:13,772] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 19:38:16,907] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 348
+[2025-06-15 19:38:16,930] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:38:16,930] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:39:55,941] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:39:58,978] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 427
+[2025-06-15 19:39:59,014] [INFO] [django.server] "GET /static/css/main.feb8701d.chunk.css HTTP/1.1" 200 1019
+[2025-06-15 19:39:59,048] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:39:59,048] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:39:59,065] [INFO] [django.server] "GET /static/css/main.feb8701d.chunk.css.map HTTP/1.1" 200 2110
+[2025-06-15 19:40:52,524] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:41:11,916] [ERROR] [django.request] Internal Server Error: /spin/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'spin_react' not found. 'spin_react' is not a valid view function or pattern name.
+[2025-06-15 19:41:11,927] [ERROR] [django.server] "GET /spin/ HTTP/1.1" 500 132196
+[2025-06-15 19:41:44,737] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:42:52,694] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:43:12,264] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:43:40,415] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:43:44,812] [ERROR] [django.request] Internal Server Error: /spin/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'spin_react' not found. 'spin_react' is not a valid view function or pattern name.
+[2025-06-15 19:43:44,830] [ERROR] [django.server] "GET /spin/ HTTP/1.1" 500 132047
+[2025-06-15 19:44:27,769] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:44:30,617] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:44:30,649] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:44:30,662] [INFO] [django.server] "GET /static/css/main.feb8701d.chunk.css HTTP/1.1" 200 1019
+[2025-06-15 19:44:30,662] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 19:44:30,664] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js HTTP/1.1" 200 2026
+[2025-06-15 19:44:30,664] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 200 42436
+[2025-06-15 19:44:30,667] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 19:44:30,669] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-15 19:44:30,675] [INFO] [django.server] "GET /static/css/main.feb8701d.chunk.css.map HTTP/1.1" 200 2110
+[2025-06-15 19:44:31,032] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 200 25743
+[2025-06-15 19:44:31,035] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 200 328654
+[2025-06-15 19:44:31,059] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js.map HTTP/1.1" 200 7996
+[2025-06-15 19:44:31,059] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js.map HTTP/1.1" 200 5664
+[2025-06-15 19:44:31,061] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js.map HTTP/1.1" 200 783565
+[2025-06-15 19:44:31,101] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:44:31,101] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:44:31,427] [INFO] [django.server] "GET /static/bookmaker_app/images/favicon.ico HTTP/1.1" 200 1131060
+[2025-06-15 19:44:40,762] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 19:45:42,231] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:45:42,239] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:45:42,273] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:45:42,273] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:46:08,035] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:46:08,052] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:46:08,085] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:46:08,086] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:47:47,902] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:47:51,014] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:47:51,025] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:47:51,061] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:47:51,061] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:48:15,642] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:48:17,490] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:48:17,510] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:48:17,537] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:48:17,538] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:48:50,748] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:48:54,844] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:48:54,886] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:48:54,888] [INFO] [django.server] "GET /static/css/main.fe46242b.chunk.css HTTP/1.1" 200 1250
+[2025-06-15 19:48:54,958] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:48:54,958] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:51:18,301] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:51:20,127] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:51:20,151] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:51:20,171] [WARNING] [django.server] "GET /static/css/main.feb8701d.chunk.css HTTP/1.1" 404 2008
+[2025-06-15 19:51:20,173] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 19:51:20,173] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js HTTP/1.1" 200 2026
+[2025-06-15 19:51:20,175] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 19:51:20,197] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:51:20,197] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:51:32,352] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:51:34,359] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:51:34,371] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:51:34,380] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 19:51:34,380] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 19:51:34,381] [INFO] [django.server] "GET /static/css/main.c9291fc4.chunk.css HTTP/1.1" 200 1215
+[2025-06-15 19:51:34,381] [INFO] [django.server] "GET /static/js/main.b71731b2.chunk.js HTTP/1.1" 304 0
+[2025-06-15 19:51:34,413] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:51:34,413] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:51:40,318] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 19:51:41,238] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:51:41,238] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:56:34,247] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:56:40,423] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:56:40,435] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:56:40,447] [INFO] [django.server] "GET /static/css/main.27c4e2a1.chunk.css HTTP/1.1" 200 1214
+[2025-06-15 19:56:40,450] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 19:56:40,452] [INFO] [django.server] "GET /static/js/main.fb734243.chunk.js HTTP/1.1" 200 2023
+[2025-06-15 19:56:40,453] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 19:56:40,470] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:56:40,470] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:56:47,509] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 19:57:09,483] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 60501)
+[2025-06-15 19:57:51,209] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:58:20,660] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 19:58:25,322] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 19:58:25,385] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 19:58:25,386] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 19:58:25,387] [INFO] [django.server] "GET /static/css/main.27c4e2a1.chunk.css HTTP/1.1" 200 1214
+[2025-06-15 19:58:25,387] [INFO] [django.server] "GET /static/js/main.8e692af0.chunk.js HTTP/1.1" 200 2024
+[2025-06-15 19:58:25,388] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 19:58:25,454] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 19:58:25,454] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 19:58:31,925] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 20:01:14,112] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 20:01:17,587] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:01:17,626] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:01:17,630] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 20:01:17,630] [INFO] [django.server] "GET /static/js/main.0bd3fe65.chunk.js HTTP/1.1" 200 2026
+[2025-06-15 20:01:17,630] [INFO] [django.server] "GET /static/css/main.27c4e2a1.chunk.css HTTP/1.1" 200 1214
+[2025-06-15 20:01:17,634] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 20:01:17,711] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 20:01:17,711] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 20:01:23,723] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 20:04:51,532] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-15 20:04:51,548] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:08:37,150] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 20:08:45,451] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-15 20:08:45,504] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:08:48,120] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:08:48,134] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:08:48,150] [INFO] [django.server] "GET /static/js/main.bf2b7db2.chunk.js HTTP/1.1" 200 2025
+[2025-06-15 20:08:48,151] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 20:08:48,151] [INFO] [django.server] "GET /static/css/main.27c4e2a1.chunk.css HTTP/1.1" 200 1214
+[2025-06-15 20:08:48,152] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 20:08:48,190] [WARNING] [django.request] Not Found: /tick.mp3
+[2025-06-15 20:08:48,191] [WARNING] [django.server] "GET /tick.mp3 HTTP/1.1" 404 4913
+[2025-06-15 20:08:54,507] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 20:09:17,212] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 60606)
+[2025-06-15 20:13:31,688] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-15 20:13:36,981] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:13:36,993] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:13:37,007] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 200 908
+[2025-06-15 20:13:37,008] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-15 20:13:37,009] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 200 1878
+[2025-06-15 20:13:37,011] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-15 20:13:43,442] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-15 20:13:50,618] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:13:50,633] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:13:50,641] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:13:50,642] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:13:50,643] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:13:50,643] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:13:56,739] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 20:13:59,354] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:13:59,367] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:13:59,375] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:13:59,375] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:13:59,375] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:13:59,376] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:05,156] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 20:14:07,240] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:14:07,260] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:14:07,266] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:14:07,267] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:07,267] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:14:07,267] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:13,009] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 20:14:16,806] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:14:16,827] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:14:16,836] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:14:16,836] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:14:16,838] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:16,841] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:22,323] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 20:14:25,116] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-15 20:14:25,134] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:14:25,142] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:14:25,142] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:14:25,143] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:25,144] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:14:30,802] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 20:14:32,305] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-15 20:14:36,255] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-15 20:14:37,249] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-15 20:16:47,183] [WARNING] [django.security.csrf] Forbidden (CSRF token from POST incorrect.): /login/
+[2025-06-15 20:16:47,185] [WARNING] [django.server] "POST /login/ HTTP/1.1" 403 2503
+[2025-06-15 20:16:51,834] [WARNING] [django.security.csrf] Forbidden (CSRF token from POST incorrect.): /login/
+[2025-06-15 20:16:51,835] [WARNING] [django.server] "POST /login/ HTTP/1.1" 403 2503
+[2025-06-15 20:17:11,840] [INFO] [django.server] "GET / HTTP/1.1" 200 56960
+[2025-06-15 20:17:11,877] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:18:03,202] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-15 20:18:03,274] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:18:03,428] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:18:03,428] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:18:03,430] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:18:03,430] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:18:13,524] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-15 20:18:40,340] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-15 20:18:40,409] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-15 20:18:40,488] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-15 20:18:40,491] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:18:40,492] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-15 20:18:40,491] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-15 20:19:39,939] [ERROR] [django.request] Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 106, in logout_view
+    logout(request)
+    ~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 251, in logout
+    if not getattr(user, "is_authenticated", True):
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+[2025-06-15 20:19:39,961] [ERROR] [django.server] "GET /logout/ HTTP/1.1" 500 219887
+[2025-06-15 20:19:45,886] [ERROR] [django.request] Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 106, in logout_view
+    logout(request)
+    ~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 251, in logout
+    if not getattr(user, "is_authenticated", True):
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+[2025-06-15 20:19:45,896] [ERROR] [django.server] "GET /logout/ HTTP/1.1" 500 219887
+[2025-06-15 20:19:49,903] [ERROR] [django.request] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 30, in home
+    return render(request, 'bookmaker_app/home.html', {
+        'najblizsze_mecze': najblizsze_mecze,
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/context.py", line 259, in bind_template
+    context = processor(self.request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/context_processors.py", line 7, in global_kategorie_dyscypliny
+    if request.user.is_authenticated:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+[2025-06-15 20:19:49,913] [ERROR] [django.server] "GET / HTTP/1.1" 500 247035
+[2025-06-15 20:19:52,062] [ERROR] [django.request] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py", line 30, in home
+    return render(request, 'bookmaker_app/home.html', {
+        'najblizsze_mecze': najblizsze_mecze,
+    })
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/template/context.py", line 259, in bind_template
+    context = processor(self.request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/context_processors.py", line 7, in global_kategorie_dyscypliny
+    if request.user.is_authenticated:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+                           ~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        session_key=self.session_key, expire_date__gt=timezone.now()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1945, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+  File "/Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/.venv/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not translate host name "pg-260d4e4d-bookmaker.d.aivencloud.com" to address: nodename nor servname provided, or not known
+
+[2025-06-15 20:19:52,072] [ERROR] [django.server] "GET / HTTP/1.1" 500 247029
+[2025-06-15 20:19:56,474] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 08:47:45,781] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 08:47:51,962] [INFO] [django.server] "GET / HTTP/1.1" 200 56960
+[2025-06-16 08:47:51,995] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 304 0
+[2025-06-16 08:47:51,997] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:47:51,997] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 304 0
+[2025-06-16 08:47:52,012] [INFO] [django.server] "GET /static/bookmaker_app/images/karol_dark.jpeg HTTP/1.1" 304 0
+[2025-06-16 08:47:52,013] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header_dark.jpg HTTP/1.1" 304 0
+[2025-06-16 08:48:02,627] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 08:48:02,647] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:48:02,662] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 08:48:02,673] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css HTTP/1.1" 304 0
+[2025-06-16 08:48:02,674] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js HTTP/1.1" 304 0
+[2025-06-16 08:48:02,674] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 08:48:25,162] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 08:48:26,090] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 08:48:26,109] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:48:27,674] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 08:48:27,697] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:48:34,316] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 08:49:07,946] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 08:49:07,966] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:49:17,223] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 08:49:17,239] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:50:05,860] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 08:50:05,874] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:50:18,322] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 08:50:18,343] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:54:08,551] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 08:54:13,290] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 08:54:13,490] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 08:54:14,428] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63420)
+[2025-06-16 08:54:16,366] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 08:54:24,953] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 80793
+[2025-06-16 08:54:24,976] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:54:29,786] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 08:54:29,806] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:54:34,218] [INFO] [django.server] "GET /static/js/main.cb574874.chunk.js.map HTTP/1.1" 200 5275
+[2025-06-16 08:54:34,219] [INFO] [django.server] "GET /static/css/main.54e2ee29.chunk.css.map HTTP/1.1" 200 1852
+[2025-06-16 08:54:34,219] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js.map HTTP/1.1" 200 7996
+[2025-06-16 08:54:34,228] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js.map HTTP/1.1" 200 783565
+[2025-06-16 08:55:03,258] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63430)
+[2025-06-16 08:55:03,258] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63432)
+[2025-06-16 08:55:03,258] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63431)
+[2025-06-16 08:57:45,104] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 08:57:49,657] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 08:57:49,684] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:57:49,706] [INFO] [django.server] "GET /static/css/main.9ce366e8.chunk.css HTTP/1.1" 200 1000
+[2025-06-16 08:57:54,430] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 08:57:54,448] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 08:57:54,461] [INFO] [django.server] "GET /static/css/main.9ce366e8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:01:37,559] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:01:41,750] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:01:41,781] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:01:41,793] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css HTTP/1.1" 200 892
+[2025-06-16 09:01:41,793] [INFO] [django.server] "GET /static/js/main.826090f1.chunk.js HTTP/1.1" 200 1812
+[2025-06-16 09:01:53,387] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:01:53,404] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:01:53,414] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:01:53,414] [INFO] [django.server] "GET /static/js/main.826090f1.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:01:55,246] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 09:01:56,170] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 09:01:56,186] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:01:58,938] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 09:01:58,944] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:01:58,967] [INFO] [django.server] "GET /static/js/main.826090f1.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:01:58,968] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:02:35,717] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:02:40,097] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 09:02:40,109] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:02:40,123] [INFO] [django.server] "GET /static/js/main.693d4ddf.chunk.js HTTP/1.1" 200 1813
+[2025-06-16 09:02:40,123] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css HTTP/1.1" 200 892
+[2025-06-16 09:02:59,609] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 09:03:03,093] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 09:03:03,432] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 09:03:06,717] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 80793
+[2025-06-16 09:03:06,736] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:03:14,771] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:03:14,778] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:03:14,795] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:03:14,797] [INFO] [django.server] "GET /static/js/main.693d4ddf.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:03:25,612] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:03:25,629] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:03:25,640] [INFO] [django.server] "GET /static/js/main.693d4ddf.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:03:25,646] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:03:32,811] [INFO] [django.server] "GET /static/js/main.693d4ddf.chunk.js.map HTTP/1.1" 200 5084
+[2025-06-16 09:03:32,813] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css.map HTTP/1.1" 200 1739
+[2025-06-16 09:05:46,841] [INFO] [django.server] "GET /static/js/main.693d4ddf.chunk.js.map HTTP/1.1" 304 0
+[2025-06-16 09:05:46,841] [INFO] [django.server] "GET /static/css/main.ef643b17.chunk.css.map HTTP/1.1" 304 0
+[2025-06-16 09:06:15,871] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63574)
+[2025-06-16 09:08:29,577] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:08:35,553] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:08:35,573] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:08:35,580] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 200 1111
+[2025-06-16 09:08:35,580] [INFO] [django.server] "GET /static/js/main.1039dc73.chunk.js HTTP/1.1" 200 1855
+[2025-06-16 09:08:56,044] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:08:56,079] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:08:56,080] [INFO] [django.server] "GET /static/js/main.1039dc73.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:08:56,080] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:12:13,085] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:12:17,968] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:12:17,990] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:12:18,007] [INFO] [django.server] "GET /static/js/main.4b2ef515.chunk.js HTTP/1.1" 200 1906
+[2025-06-16 09:12:18,008] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 200 1111
+[2025-06-16 09:12:53,143] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:12:57,954] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:12:57,982] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:12:57,994] [INFO] [django.server] "GET /static/js/main.09f095ea.chunk.js HTTP/1.1" 200 1906
+[2025-06-16 09:12:57,994] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 200 1111
+[2025-06-16 09:13:14,541] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:13:14,562] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:13:14,569] [INFO] [django.server] "GET /static/js/main.09f095ea.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:13:14,570] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:13:24,236] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:13:24,255] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:13:24,263] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:13:24,265] [INFO] [django.server] "GET /static/js/main.09f095ea.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:13:32,521] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:13:32,540] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:13:32,550] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:13:32,552] [INFO] [django.server] "GET /static/js/main.09f095ea.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:13:42,883] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:13:42,899] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:13:42,906] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:13:42,907] [INFO] [django.server] "GET /static/js/main.09f095ea.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:13:53,835] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:13:53,849] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:13:53,855] [INFO] [django.server] "GET /static/css/main.c1ebae40.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:13:53,856] [INFO] [django.server] "GET /static/js/main.09f095ea.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:16:45,434] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:16:53,082] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:16:53,117] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:16:53,132] [INFO] [django.server] "GET /static/css/main.fed333d9.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:16:53,133] [INFO] [django.server] "GET /static/js/main.364a5cbc.chunk.js HTTP/1.1" 200 1913
+[2025-06-16 09:17:13,346] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:17:13,366] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:17:13,374] [INFO] [django.server] "GET /static/css/main.fed333d9.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:17:13,376] [INFO] [django.server] "GET /static/js/main.364a5cbc.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:17:36,823] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:17:36,845] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:17:36,854] [INFO] [django.server] "GET /static/css/main.fed333d9.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:17:36,856] [INFO] [django.server] "GET /static/js/main.364a5cbc.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:25:18,279] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:25:23,113] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:25:23,152] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:25:23,167] [INFO] [django.server] "GET /static/js/main.161c5b58.chunk.js HTTP/1.1" 200 1930
+[2025-06-16 09:25:23,167] [INFO] [django.server] "GET /static/css/main.fed333d9.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:25:52,200] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63787)
+[2025-06-16 09:29:04,587] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:29:09,009] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:29:09,048] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:29:09,063] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:29:09,064] [INFO] [django.server] "GET /static/js/main.161c5b58.chunk.js HTTP/1.1" 200 1930
+[2025-06-16 09:29:59,359] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:30:10,234] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:30:15,057] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:30:15,080] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:30:15,096] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:30:15,096] [INFO] [django.server] "GET /static/js/main.364a5cbc.chunk.js HTTP/1.1" 200 1913
+[2025-06-16 09:30:44,130] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63861)
+[2025-06-16 09:31:57,742] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:32:29,505] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:32:29,527] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:32:29,540] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:32:29,540] [INFO] [django.server] "GET /static/js/main.10c66f74.chunk.js HTTP/1.1" 200 2001
+[2025-06-16 09:32:58,544] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 63913)
+[2025-06-16 09:33:44,158] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:33:48,495] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:33:48,520] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:33:48,537] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:33:48,537] [INFO] [django.server] "GET /static/js/main.ffae928b.chunk.js HTTP/1.1" 200 2001
+[2025-06-16 09:35:47,201] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:35:52,478] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:35:52,495] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:35:52,507] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:35:52,507] [INFO] [django.server] "GET /static/js/main.0328d23a.chunk.js HTTP/1.1" 200 2002
+[2025-06-16 09:37:48,692] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:37:53,395] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:37:53,443] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:37:53,456] [INFO] [django.server] "GET /static/css/main.b612ac2a.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:37:53,456] [INFO] [django.server] "GET /static/js/main.b333e99b.chunk.js HTTP/1.1" 200 2001
+[2025-06-16 09:38:41,914] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:38:46,047] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:38:46,074] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:38:46,089] [INFO] [django.server] "GET /static/css/main.b612ac2a.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:38:46,089] [INFO] [django.server] "GET /static/js/main.fe167bf8.chunk.js HTTP/1.1" 200 2001
+[2025-06-16 09:39:36,599] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:39:40,722] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:39:40,743] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:39:40,761] [INFO] [django.server] "GET /static/js/main.96922b84.chunk.js HTTP/1.1" 200 2002
+[2025-06-16 09:39:40,761] [INFO] [django.server] "GET /static/css/main.b612ac2a.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:40:43,950] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:40:51,637] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:40:51,663] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:40:51,678] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:40:51,678] [INFO] [django.server] "GET /static/js/main.65a0bdce.chunk.js HTTP/1.1" 200 2001
+[2025-06-16 09:43:43,202] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 09:43:47,561] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:43:47,574] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:43:47,591] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 09:43:47,591] [INFO] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 200 2016
+[2025-06-16 09:56:44,773] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 09:56:44,791] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 09:56:44,799] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 09:56:44,799] [INFO] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 304 0
+[2025-06-16 09:57:03,480] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 10:11:33,996] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:11:45,298] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:11:53,494] [INFO] [django.server] "GET / HTTP/1.1" 200 56960
+[2025-06-16 10:11:53,537] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:11:58,543] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:11:58,553] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:11:58,569] [WARNING] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:11:58,570] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:11:58,570] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 10:11:58,571] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:12:15,265] [WARNING] [django.request] Method Not Allowed: /api/spin/
+[2025-06-16 10:12:15,265] [WARNING] [django.server] "GET /api/spin/ HTTP/1.1" 405 40
+[2025-06-16 10:12:16,920] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:12:16,923] [WARNING] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:12:21,574] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:12:21,598] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:12:21,603] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:12:21,603] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:12:21,607] [WARNING] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:12:21,607] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:12:33,879] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker/urls.py changed, reloading.
+[2025-06-16 10:12:35,238] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:12:41,069] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:12:41,099] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:12:41,107] [WARNING] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:12:41,108] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:12:41,109] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:12:41,109] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:12:46,000] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:12:46,018] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:12:46,030] [WARNING] [django.server] "GET /static/js/main.5a46a8a5.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:13:16,145] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:13:20,907] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:13:20,931] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:13:20,942] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:13:20,942] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:13:20,943] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:13:20,943] [INFO] [django.server] "GET /static/js/main.a6f6ae07.chunk.js HTTP/1.1" 200 2651
+[2025-06-16 10:13:24,314] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 10:13:25,245] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 10:13:25,263] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:13:29,784] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:13:29,802] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:13:31,602] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:13:31,603] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:13:34,350] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:13:34,353] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:13:36,787] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 10:13:39,906] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 10:13:40,246] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 10:13:42,436] [WARNING] [django.security.csrf] Forbidden (CSRF token from POST incorrect.): /login/
+[2025-06-16 10:13:42,437] [WARNING] [django.server] "POST /login/ HTTP/1.1" 403 2503
+[2025-06-16 10:13:43,529] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 80793
+[2025-06-16 10:13:43,529] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64305)
+[2025-06-16 10:13:47,168] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 10:13:53,922] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 10:13:54,134] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 10:13:57,423] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 80793
+[2025-06-16 10:13:57,449] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:14:02,375] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:14:02,394] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:14:02,412] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:14:02,425] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:14:02,425] [INFO] [django.server] "GET /static/js/main.a6f6ae07.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:14:02,425] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:14:04,413] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 13
+[2025-06-16 10:14:09,432] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 10:14:13,313] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:14:13,315] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:14:18,063] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:14:18,065] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:14:24,135] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:14:24,152] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:14:24,161] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:14:24,161] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:14:24,161] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:14:24,163] [INFO] [django.server] "GET /static/js/main.a6f6ae07.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:14:30,085] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 81351
+[2025-06-16 10:14:30,114] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:14:40,760] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:14:40,793] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:14:42,279] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:14:42,281] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:14:47,628] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:14:47,632] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:16:11,647] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 10:16:12,186] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:16:17,216] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:16:17,239] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:16:17,254] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:16:17,255] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:16:17,256] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:16:17,256] [INFO] [django.server] "GET /static/js/main.a6f6ae07.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:16:18,727] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:16:18,728] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:16:22,128] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 10:16:23,035] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 10:16:23,054] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:16:24,630] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:16:24,640] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:16:25,879] [WARNING] [django.request] Unauthorized: /api/spin/
+[2025-06-16 10:16:25,880] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 401 63
+[2025-06-16 10:16:30,895] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 10:22:07,748] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 10:22:08,174] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:22:11,182] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:22:11,218] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:22:11,222] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:22:11,223] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:22:11,223] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:22:11,225] [INFO] [django.server] "GET /static/js/main.a6f6ae07.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:22:15,568] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:22:15,569] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:22:19,328] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:22:19,344] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:22:20,711] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:22:20,711] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:23:17,503] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 10:23:17,920] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:24:50,785] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:24:54,024] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:24:54,059] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:24:54,065] [INFO] [django.server] "GET /static/js/main.8b8899f5.chunk.js HTTP/1.1" 200 2883
+[2025-06-16 10:24:55,174] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:24:55,174] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:25:45,195] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:25:49,564] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:25:50,657] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:25:50,657] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:26:02,953] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:26:03,909] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:26:03,910] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:26:07,113] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:26:07,121] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:26:07,140] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:26:07,140] [INFO] [django.server] "GET /static/js/main.ca8133e6.chunk.js HTTP/1.1" 200 2732
+[2025-06-16 10:26:07,140] [INFO] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 200 1225
+[2025-06-16 10:26:07,144] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:26:07,937] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:26:07,938] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:26:10,146] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:26:10,146] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:32:42,847] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:32:44,444] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:32:44,476] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:32:44,483] [WARNING] [django.server] "GET /static/js/main.ca8133e6.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:32:44,485] [WARNING] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 404 2008
+[2025-06-16 10:32:44,487] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:32:44,488] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:32:46,359] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:32:46,366] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:32:46,373] [WARNING] [django.server] "GET /static/css/main.786089c4.chunk.css HTTP/1.1" 404 2008
+[2025-06-16 10:32:46,374] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:32:46,375] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:32:46,377] [WARNING] [django.server] "GET /static/js/main.ca8133e6.chunk.js HTTP/1.1" 404 2002
+[2025-06-16 10:33:05,533] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:33:06,871] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:33:06,882] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:33:06,892] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:33:06,893] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:33:06,893] [INFO] [django.server] "GET /static/js/main.48af0a9a.chunk.js HTTP/1.1" 200 2761
+[2025-06-16 10:33:06,893] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 10:33:08,627] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:33:08,627] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:33:16,823] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:33:16,824] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:33:20,313] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 10:33:23,011] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 10:33:23,358] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 10:33:26,627] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 81351
+[2025-06-16 10:33:26,646] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:33:31,532] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:33:31,558] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:33:31,566] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:33:31,566] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:33:31,570] [INFO] [django.server] "GET /static/js/main.48af0a9a.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:33:31,570] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:33:33,919] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:33:33,920] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:41:18,218] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:41:18,267] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:45:39,359] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:45:39,360] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:46:11,349] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:46:17,343] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:46:17,358] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:46:17,377] [INFO] [django.server] "GET /static/js/main.9e7bb6a2.chunk.js HTTP/1.1" 200 2752
+[2025-06-16 10:46:17,378] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 10:46:17,378] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:46:17,379] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:46:19,093] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:46:19,094] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:46:25,934] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:46:25,964] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:46:25,966] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:46:25,966] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:46:25,966] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:46:25,968] [INFO] [django.server] "GET /static/js/main.9e7bb6a2.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:46:27,249] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:46:27,250] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:47:34,381] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:47:38,553] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:47:38,578] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:47:38,589] [INFO] [django.server] "GET /static/js/main.303404ab.chunk.js HTTP/1.1" 200 2834
+[2025-06-16 10:47:38,590] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 10:47:38,590] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:47:38,591] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:47:40,075] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:47:40,086] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:47:45,240] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:47:45,260] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:47:45,261] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:47:45,261] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:47:45,261] [INFO] [django.server] "GET /static/js/main.303404ab.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:47:45,263] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:47:47,992] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 10:47:48,903] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 10:47:48,920] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:47:50,285] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:47:50,300] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:47:50,310] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:47:50,314] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:47:50,315] [INFO] [django.server] "GET /static/js/main.303404ab.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:47:50,315] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:47:51,089] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:47:51,089] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:47:52,839] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 10:47:58,460] [INFO] [bookmaker] Użytkownik mljar zalogował się.
+[2025-06-16 10:47:58,801] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 10:47:59,422] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 55929
+[2025-06-16 10:47:59,437] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:48:01,504] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:48:01,512] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:48:01,529] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:48:01,529] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:48:01,532] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:48:01,532] [INFO] [django.server] "GET /static/js/main.303404ab.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:48:03,209] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 12
+[2025-06-16 10:48:08,232] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 10:48:11,859] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 56485
+[2025-06-16 10:48:11,874] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:48:15,864] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:48:15,873] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:48:15,881] [INFO] [django.server] "GET /static/js/main.303404ab.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:48:15,881] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:48:15,882] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:48:15,883] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:48:17,128] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:48:17,130] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:51:10,175] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:51:13,319] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:51:13,342] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:51:13,358] [INFO] [django.server] "GET /static/js/main.a80dfd28.chunk.js HTTP/1.1" 200 3071
+[2025-06-16 10:51:13,358] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:51:13,358] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 10:51:13,361] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:51:15,098] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:51:15,100] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:51:38,025] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:51:38,040] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:51:38,046] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:51:38,048] [INFO] [django.server] "GET /static/js/main.a80dfd28.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:51:38,049] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:51:38,051] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:51:39,258] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:51:39,258] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:52:26,579] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:52:28,110] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:52:28,128] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:52:28,139] [INFO] [django.server] "GET /static/js/main.62f4b545.chunk.js HTTP/1.1" 200 3077
+[2025-06-16 10:52:28,139] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 10:52:28,139] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:52:28,140] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:52:29,635] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:52:29,636] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:52:32,175] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:52:32,186] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:52:32,193] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:52:32,193] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:52:32,193] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:52:32,195] [INFO] [django.server] "GET /static/js/main.62f4b545.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:52:33,465] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:52:33,465] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:57:11,764] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 10:57:13,437] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:57:13,459] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:57:13,478] [INFO] [django.server] "GET /static/js/main.ff34fb9c.chunk.js HTTP/1.1" 200 3092
+[2025-06-16 10:57:13,480] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 10:57:13,481] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 10:57:13,483] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 10:57:14,994] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:57:14,996] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:57:17,360] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35505
+[2025-06-16 10:57:17,378] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:57:17,385] [INFO] [django.server] "GET /static/js/main.ff34fb9c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:57:17,386] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:57:17,386] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:57:17,386] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:57:19,007] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:57:19,010] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 10:57:20,835] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 10:57:21,747] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 10:57:21,760] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:57:23,327] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 10:57:23,337] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:57:23,348] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:57:23,352] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:57:23,353] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:57:23,353] [INFO] [django.server] "GET /static/js/main.ff34fb9c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:57:24,202] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:57:24,203] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 10:57:26,116] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 10:57:31,003] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 10:57:31,348] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 10:57:34,630] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 81351
+[2025-06-16 10:57:34,640] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:57:39,119] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 10:57:39,130] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 10:57:39,141] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 10:57:39,142] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:57:39,143] [INFO] [django.server] "GET /static/js/main.ff34fb9c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 10:57:39,143] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 10:57:40,509] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 10:57:40,510] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 11:00:00,167] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:00:01,717] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:00:07,769] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:00:07,786] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:00:07,800] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:00:07,801] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:00:07,801] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:00:07,802] [INFO] [django.server] "GET /static/js/main.ff34fb9c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:00:09,252] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:00:09,298] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 11:00:09,299] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 11:00:15,673] [INFO] [django.server] "GET /static/js/main.ff34fb9c.chunk.js.map HTTP/1.1" 200 8947
+[2025-06-16 11:00:15,674] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css.map HTTP/1.1" 200 2762
+[2025-06-16 11:00:15,675] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js.map HTTP/1.1" 200 7996
+[2025-06-16 11:00:15,678] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js.map HTTP/1.1" 200 783565
+[2025-06-16 11:00:44,700] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64844)
+[2025-06-16 11:00:44,701] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64842)
+[2025-06-16 11:00:44,701] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64841)
+[2025-06-16 11:00:44,689] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64843)
+[2025-06-16 11:03:46,789] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:03:51,452] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:03:51,490] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:03:51,516] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 11:03:51,518] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 200 3083
+[2025-06-16 11:03:51,518] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 11:03:51,520] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 11:03:51,565] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js.map HTTP/1.1" 200 8946
+[2025-06-16 11:03:51,568] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js.map HTTP/1.1" 200 7996
+[2025-06-16 11:03:51,568] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css.map HTTP/1.1" 200 2762
+[2025-06-16 11:03:51,570] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js.map HTTP/1.1" 200 783565
+[2025-06-16 11:03:53,328] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:03:53,389] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 11:03:53,391] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 11:07:52,044] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:07:56,408] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:07:56,433] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:07:56,446] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 11:07:56,447] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 11:07:56,448] [INFO] [django.server] "GET /static/js/main.de442852.chunk.js HTTP/1.1" 200 3083
+[2025-06-16 11:07:56,450] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 11:07:57,641] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:07:57,691] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 11:07:57,692] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 49
+[2025-06-16 11:08:02,553] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:08:02,568] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:08:02,573] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:08:02,573] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:08:02,573] [INFO] [django.server] "GET /static/js/main.de442852.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:08:02,574] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:08:31,610] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64941)
+[2025-06-16 11:08:31,610] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 64936)
+[2025-06-16 11:15:50,014] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:15:50,465] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:16:27,543] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:16:27,933] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:16:40,424] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:16:40,803] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:16:49,203] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:16:49,618] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:16:59,041] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:16:59,456] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:17:05,967] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:17:06,002] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:17:06,015] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:17:06,016] [INFO] [django.server] "GET /static/js/main.de442852.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:17:06,016] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:17:06,016] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:17:06,016] [INFO] [django.server] "GET /static/bookmaker_app/images/logo_header.jpg HTTP/1.1" 200 42436
+[2025-06-16 11:17:06,017] [INFO] [django.server] "GET /static/bookmaker_app/images/karol.jpeg HTTP/1.1" 200 63008
+[2025-06-16 11:17:10,451] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:17:10,498] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:17:15,520] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 11:17:16,821] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:17:16,873] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:17:22,233] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:17:22,252] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:17:23,658] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:17:23,706] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:17:45,884] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 65037)
+[2025-06-16 11:18:14,808] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:18:20,814] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:18:20,838] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:18:20,850] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 11:18:20,854] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 11:18:20,855] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 200 3083
+[2025-06-16 11:18:20,855] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 11:18:22,370] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:18:22,420] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:18:27,436] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 11:18:28,622] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:18:28,672] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:18:32,738] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:18:32,756] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:18:32,762] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:18:32,762] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:18:32,762] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:18:32,763] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:18:34,126] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:18:34,179] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:18:35,965] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 11:18:36,891] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 11:18:36,913] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:18:38,459] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 11:18:38,468] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:18:38,479] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:18:38,480] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:18:38,482] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:18:38,482] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:18:39,747] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 11:18:39,748] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 11:19:07,509] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 65065)
+[2025-06-16 11:19:07,510] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 65064)
+[2025-06-16 11:19:30,980] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:19:31,507] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:19:36,271] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 11:19:38,825] [INFO] [bookmaker] Użytkownik jamalbe zalogował się.
+[2025-06-16 11:19:39,161] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 11:19:42,438] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 81351
+[2025-06-16 11:19:42,464] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:19:52,268] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:19:52,286] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:19:52,305] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:19:52,306] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:19:52,306] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:19:52,307] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:19:53,748] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:19:53,797] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:19:58,813] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:20:03,283] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:20:03,296] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:20:03,303] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:20:03,304] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:20:03,304] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:20:03,305] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:20:04,740] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:20:04,784] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:20:09,912] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:20:38,498] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:20:38,921] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:20:41,233] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:20:41,373] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 32
+[2025-06-16 11:20:46,009] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:20:46,036] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:20:46,039] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:20:46,040] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:20:46,040] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:20:46,040] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:20:47,122] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:20:47,255] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 32
+[2025-06-16 11:20:52,272] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:20:56,525] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:20:56,536] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:20:58,088] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:20:58,222] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 33
+[2025-06-16 11:22:40,414] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:22:40,849] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:22:51,349] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:22:51,719] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:23:02,171] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:23:02,598] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:23:07,692] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:23:07,720] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:23:07,725] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:23:07,726] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:23:07,726] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:23:07,727] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:23:09,068] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:23:09,111] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:23:14,122] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:23:18,841] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:23:18,859] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:23:21,021] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:23:21,065] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:24:57,740] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:24:58,146] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:25:13,722] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:25:14,099] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:25:22,218] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:25:22,242] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:25:22,251] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:25:22,252] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:25:22,253] [INFO] [django.server] "GET /static/js/main.02ace81b.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:25:22,253] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:25:23,467] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:25:23,516] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:25:28,632] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:26:51,325] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:26:55,488] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:26:55,508] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:26:55,530] [INFO] [django.server] "GET /static/js/main.1ddb6514.chunk.js HTTP/1.1" 200 3097
+[2025-06-16 11:26:55,530] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 11:26:55,531] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 11:26:55,532] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 11:26:57,064] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:26:57,110] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:27:02,238] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 11:27:24,563] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 65168)
+[2025-06-16 11:27:24,564] [INFO] [django.server] - Broken pipe from ('127.0.0.1', 65169)
+[2025-06-16 11:30:13,539] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:30:13,958] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:30:24,416] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:30:24,780] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:30:31,085] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:30:31,108] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:30:31,127] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:30:31,129] [INFO] [django.server] "GET /static/js/main.1ddb6514.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:30:31,129] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:30:31,130] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:30:32,468] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:30:32,558] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:30:37,569] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:30:39,224] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:30:39,310] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:30:44,025] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:30:44,051] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:31:03,915] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:31:03,932] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:31:03,937] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:31:03,937] [INFO] [django.server] "GET /static/js/main.1ddb6514.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:31:03,939] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:31:03,940] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:31:05,363] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:31:05,453] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:31:10,597] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:32:43,310] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:32:43,714] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:32:45,020] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:32:49,291] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:32:49,320] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:32:49,324] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:32:49,324] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:32:49,324] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:32:49,325] [INFO] [django.server] "GET /static/js/main.1ddb6514.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:32:50,841] [INFO] [bookmaker] Spin API – użytkownik: jamalbe, uwierzytelniony: True
+[2025-06-16 11:32:50,933] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:32:55,951] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:33:00,869] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:33:00,896] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:33:59,122] [INFO] [django.utils.autoreload] /Users/hubertposkrobko/Desktop/PB/Semestr4/SZKIELETY/Projekcik/Bookmaker_app/views.py changed, reloading.
+[2025-06-16 11:33:59,569] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:34:04,403] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:34:04,424] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:34:04,433] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:34:04,435] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:34:04,435] [INFO] [django.server] "GET /static/js/main.1ddb6514.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:34:04,435] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:34:05,961] [INFO] [bookmaker] Spin API – użytkownik: jamalbe już dziś kręcił.
+[2025-06-16 11:34:06,006] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:34:11,027] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:34:15,047] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:34:15,063] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:34:16,883] [INFO] [bookmaker] Spin API – użytkownik: jamalbe już dziś kręcił.
+[2025-06-16 11:34:16,924] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:35:35,003] [INFO] [django.utils.autoreload] Watching for file changes with StatReloader
+[2025-06-16 11:35:39,560] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 48380
+[2025-06-16 11:35:39,579] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:35:39,592] [INFO] [django.server] "GET /static/js/main.38ef8f0c.chunk.js HTTP/1.1" 200 3157
+[2025-06-16 11:35:39,593] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 200 1236
+[2025-06-16 11:35:39,593] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 200 1502
+[2025-06-16 11:35:39,594] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 200 188858
+[2025-06-16 11:35:41,456] [INFO] [bookmaker] Spin API – użytkownik: jamalbe już dziś kręcił.
+[2025-06-16 11:35:41,498] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:35:47,563] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 11:35:48,484] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 11:35:48,509] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:35:50,749] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 34839
+[2025-06-16 11:35:50,763] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:35:50,764] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:35:50,764] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:35:50,768] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:35:50,768] [INFO] [django.server] "GET /static/js/main.38ef8f0c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:35:51,847] [WARNING] [django.request] Forbidden: /api/spin/
+[2025-06-16 11:35:51,848] [WARNING] [django.server] "POST /api/spin/ HTTP/1.1" 403 58
+[2025-06-16 11:35:53,804] [INFO] [django.server] "GET /login/ HTTP/1.1" 200 4998
+[2025-06-16 11:36:03,795] [INFO] [bookmaker] Użytkownik MichalAdmin zalogował się.
+[2025-06-16 11:36:04,128] [INFO] [django.server] "POST /login/ HTTP/1.1" 302 0
+[2025-06-16 11:36:04,961] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 47453
+[2025-06-16 11:36:04,970] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:36:07,081] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 36456
+[2025-06-16 11:36:07,092] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:36:07,101] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:36:07,106] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:36:07,109] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:36:07,109] [INFO] [django.server] "GET /static/js/main.38ef8f0c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:36:08,477] [INFO] [bookmaker] Spin API – użytkownik: MichalAdmin, wynik: 20 zł
+[2025-06-16 11:36:08,479] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 33
+[2025-06-16 11:36:13,502] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 200 63008
+[2025-06-16 11:36:16,426] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 36456
+[2025-06-16 11:36:16,437] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:36:16,443] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:36:16,444] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:36:16,444] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:36:16,445] [INFO] [django.server] "GET /static/js/main.38ef8f0c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:36:18,026] [INFO] [bookmaker] Spin API – użytkownik: MichalAdmin już dziś kręcił.
+[2025-06-16 11:36:18,078] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 35
+[2025-06-16 11:36:20,138] [INFO] [django.server] "GET /logout/ HTTP/1.1" 302 0
+[2025-06-16 11:36:21,056] [INFO] [django.server] "GET / HTTP/1.1" 200 43484
+[2025-06-16 11:36:21,082] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:36:23,441] [INFO] [django.server] "GET /api/register/ HTTP/1.1" 200 5565
+[2025-06-16 11:36:38,412] [INFO] [django.server] "POST /api/register/ HTTP/1.1" 200 5743
+[2025-06-16 11:36:44,597] [INFO] [bookmaker] Zarejestrowano nowego użytkownika: nig
+[2025-06-16 11:36:44,598] [INFO] [django.server] "POST /api/register/ HTTP/1.1" 302 0
+[2025-06-16 11:36:44,609] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 302 0
+[2025-06-16 11:36:44,615] [INFO] [django.server] "GET /login/?next=/user_panel/ HTTP/1.1" 200 5000
+[2025-06-16 11:36:51,218] [INFO] [bookmaker] Użytkownik nig zalogował się.
+[2025-06-16 11:36:51,559] [INFO] [django.server] "POST /login/?next=/user_panel/ HTTP/1.1" 302 0
+[2025-06-16 11:36:52,195] [INFO] [django.server] "GET /user_panel/ HTTP/1.1" 200 38905
+[2025-06-16 11:36:52,207] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:36:53,998] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35503
+[2025-06-16 11:36:54,023] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:36:54,025] [INFO] [django.server] "GET /static/js/main.38ef8f0c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:36:54,027] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:36:54,027] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:36:54,028] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:36:55,774] [INFO] [bookmaker] Spin API – użytkownik: nig, wynik: 0 zł
+[2025-06-16 11:36:55,777] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 32
+[2025-06-16 11:37:00,796] [INFO] [django.server] "GET /static/media/karol.ef1dc56d.jpeg HTTP/1.1" 304 0
+[2025-06-16 11:37:08,302] [INFO] [django.server] "GET /spin/ HTTP/1.1" 200 35503
+[2025-06-16 11:37:08,325] [WARNING] [django.server] "GET /static/bookmaker_app/css/newMenu.css HTTP/1.1" 404 2014
+[2025-06-16 11:37:08,329] [INFO] [django.server] "GET /static/js/runtime~main.a8a9905a.js HTTP/1.1" 304 0
+[2025-06-16 11:37:08,329] [INFO] [django.server] "GET /static/css/main.be7e48a8.chunk.css HTTP/1.1" 304 0
+[2025-06-16 11:37:08,329] [INFO] [django.server] "GET /static/js/2.9e11b540.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:37:08,331] [INFO] [django.server] "GET /static/js/main.38ef8f0c.chunk.js HTTP/1.1" 304 0
+[2025-06-16 11:37:09,318] [INFO] [bookmaker] Spin API – użytkownik: nig już dziś kręcił.
+[2025-06-16 11:37:09,377] [INFO] [django.server] "POST /api/spin/ HTTP/1.1" 200 34

@@ -1,5 +1,7 @@
 import os
-from datetime import date
+from datetime import date, datetime, time
+from random import choice
+
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -7,8 +9,9 @@ from django.urls import path
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
+from django.utils import timezone
 from django.views.generic import TemplateView
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -249,6 +252,59 @@ def obstaw_mecz(request, event_id):
         'form': form,
         'event': event
     })
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def spin_api(request):
+    user = request.user
+    today = timezone.now().date()
+
+    # Sprawdzenie, czy użytkownik już dziś losował
+    if HistoriaTransakcji.objects.filter(user=user, typ='Spin', stworzono__date=today).exists():
+        logger.info(f"Spin API – użytkownik: {user.username} już dziś kręcił.")
+        ostatni_spin = HistoriaTransakcji.objects.filter(user=user, typ='Spin', stworzono__date=today).first()
+        return Response({
+            'result': float(ostatni_spin.wartosc),
+            'message': 'already'
+        }, status=200)
+
+    # Losowanie nagrody
+    prize_options = [0, 2, 5, 10, 20]
+    result = choice(prize_options)
+
+    # Aktualizacja salda użytkownika tylko jeśli wynik > 0
+    if result > 0:
+        user.saldo += result
+        user.save()
+        opis = f'Dzienna nagroda: {result} zł'
+    else:
+        opis = 'Dzienna próba: 0 zł'
+
+    # Zapis do historii transakcji
+    HistoriaTransakcji.objects.create(
+        user=user,
+        wartosc=result,
+        typ='Spin',
+        opis=opis
+    )
+
+    logger.info(f"Spin API – użytkownik: {user.username}, wynik: {result} zł")
+
+    return Response({
+        'result': result,
+        'message': 'success'
+    })
+
+    if result > 0:
+        user.saldo += result
+        user.save()
+
+    return Response({
+        'result': result,
+        'message': 'success'
+    }, status=200)
+
 
 def custom_404(request, exception=None):
     return render(request, '404.html', status=404)

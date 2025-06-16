@@ -1,13 +1,9 @@
+{% extends "bookmaker_app/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Spin</title>
-    <link rel="stylesheet" href="{% static 'bookmaker_app/css/spin.css' %}" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="{% static 'bookmaker_app/js/spin_bundle.js' %}"></script>
-  </body>
-</html>
+{% block content %}
+  <div id="root"></div>
+  <link rel="stylesheet" href="{% static 'css/main.be7e48a8.chunk.css' %}" />
+    <script src="{% static 'js/runtime~main.a8a9905a.js' %}"></script>
+    <script src="{% static 'js/2.9e11b540.chunk.js' %}"></script>
+    <script src="{% static 'js/main.38ef8f0c.chunk.js' %}"></script>
+{% endblock %}
